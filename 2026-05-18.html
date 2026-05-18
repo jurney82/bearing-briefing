@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태광베어링 업황 브리핑</title>
+<style>
+  @page{size:A4;margin:18mm 15mm}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Malgun Gothic','맑은 고딕',sans-serif;background:#f0f0f0;color:#1a1a1a;font-size:13px;line-height:1.6}
+  .page-wrap{max-width:820px;margin:24px auto;background:#fff;padding:0 0 24px;box-shadow:0 2px 12px rgba(0,0,0,.1);border-radius:4px}
+  .cover{padding:32px 28px 24px;border-bottom:3px solid #1a1a1a;margin-bottom:24px}
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .company{font-size:13px;color:#555;letter-spacing:1px;font-weight:600}
+  .date-badge{background:#1a1a1a;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px}
+  .cover-title{margin-top:16px;font-size:26px;font-weight:800}
+  .cover-sub{font-size:13px;color:#666;margin-top:4px}
+  .sentiment-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+  .s-chip{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700}
+  .s-neg{background:#FAECE7;color:#993C1D}.s-neu{background:#FAEEDA;color:#854F0B}.s-pos{background:#EAF3DE;color:#3B6D11}
+  .s-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .dot-neg{background:#993C1D}.dot-neu{background:#854F0B}.dot-pos{background:#3B6D11}
+  .archive-bar{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:6px;padding:12px 20px;margin:0 28px 24px;font-size:12px}
+  .archive-bar h3{font-size:12px;color:#555;margin-bottom:8px}
+  .archive-bar a{display:inline-block;margin:2px 4px;padding:3px 10px;background:#fff;border:1px solid #ddd;border-radius:10px;color:#185FA5;text-decoration:none;font-size:11px}
+  .archive-bar a:hover{background:#185FA5;color:#fff}
+  .section{margin-bottom:28px}
+  .sec-header{padding:10px 16px;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:10px}
+  .sec-header h2{font-size:15px;font-weight:800;color:#fff}
+  .sec-sentiment{background:rgba(255,255,255,.25);color:#fff;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700}
+  .sec-body{border:1.5px solid #e0e0e0;border-top:none;border-radius:0 0 6px 6px;padding:16px}
+  .headline{font-size:16px;font-weight:800;margin-bottom:6px}
+  .overview{font-size:12.5px;color:#444;margin-bottom:14px;padding:8px 12px;background:#f8f8f8;border-radius:4px}
+  .points-title{font-size:12px;font-weight:700;color:#555;margin-bottom:6px}
+  table.points{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px}
+  table.points th{background:#f2f2f2;padding:6px 8px;text-align:left;font-weight:700;border:1px solid #ddd;color:#333}
+  table.points td{padding:7px 8px;border:1px solid #e8e8e8;vertical-align:top}
+  table.points tr:nth-child(even) td{background:#fafafa}
+  .tag-pos{background:#EAF3DE;color:#3B6D11;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+  .tag-neu{background:#FAEEDA;color:#854F0B;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+  .tag-neg{background:#FAECE7;color:#993C1D;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+  .analysis-list{margin-bottom:14px;display:flex;flex-direction:column;gap:7px}
+  .analysis-item{border-left:3px solid;padding:7px 10px;background:#fafafa;border-radius:0 4px 4px 0}
+  .analysis-item strong{font-size:12px;display:block;margin-bottom:2px}
+  .analysis-item p{font-size:12px;color:#444}
+  .sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+  .sub-box{border:1px solid #e8e8e8;border-radius:4px;padding:10px 12px}
+  .sub-box h4{font-size:11px;font-weight:700;color:#888;margin-bottom:6px}
+  .sub-box ul{padding-left:14px}
+  .sub-box li{font-size:12px;color:#333;margin-bottom:3px}
+  .action-box{border:1.5px solid;border-radius:4px;padding:10px 12px;margin-top:10px;grid-column:span 2}
+  .action-box h4{font-size:11px;font-weight:700;margin-bottom:4px}
+  .action-box p{font-size:12.5px;font-weight:600}
+  .c-market{background:#BA7517}.b-market{border-color:#BA7517}.t-market{color:#BA7517}
+  .c-demand{background:#185FA5}.b-demand{border-color:#185FA5}.t-demand{color:#185FA5}
+  .c-maker{background:#0F6E56}.b-maker{border-color:#0F6E56}.t-maker{color:#0F6E56}
+  .c-forex{background:#534AB7}.b-forex{border-color:#534AB7}.t-forex{color:#534AB7}
+  .refs{margin-top:20px;border-top:1px solid #e0e0e0;padding-top:14px}
+  .refs h3{font-size:12px;font-weight:700;color:#777;margin-bottom:8px}
+  .refs ul{padding-left:16px}
+  .refs li{font-size:11px;color:#555;margin-bottom:3px}
+  .refs a{color:#185FA5;text-decoration:none}
+  .footer{text-align:center;margin-top:24px;padding-top:12px;border-top:1px solid #e0e0e0;font-size:11px;color:#aaa}
+  .print-btn{display:block;margin:20px auto 0;padding:10px 32px;background:#1a1a1a;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+  @media print{
+    .print-btn,.archive-bar{display:none}
+    body{font-size:10.5px;background:#fff!important}
+    .page-wrap{box-shadow:none;margin:0;max-width:100%}
+    .cover{page-break-after:always;padding:48px 28px 36px;margin-bottom:0;display:flex;flex-direction:column;justify-content:center;min-height:90vh}
+    .cover-title{font-size:32px;margin-top:24px}
+    .section{page-break-before:always;page-break-inside:avoid;margin-bottom:0}
+    .sec-body{padding:10px 14px}
+    .headline{font-size:14px;margin-bottom:5px}
+    .overview{font-size:11px;margin-bottom:10px}
+    table.points td,table.points th{padding:4px 7px;font-size:10.5px}
+    .analysis-item p{font-size:10.5px}
+    .sub-box li{font-size:10.5px}
+    .refs{page-break-before:always;padding-top:24px;border-top:none}
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<div class="cover">
+  <div class="cover-top">
+    <span class="company">태광베어링 · 대구·경북 영업본부</span>
+    <span class="date-badge">2026년 5월 18일 (월)</span>
+  </div>
+  <div class="cover-title">업황 브리핑</div>
+  <div class="cover-sub">베어링·LM가이드·볼스크류 유통업 시황 · AI 자동 생성</div>
+  <div class="sentiment-row">
+    <div class="s-chip s-neg"><span class="s-dot dot-neg"></span> 📊 시장 시황 · 부정</div>
+    <div class="s-chip s-neu"><span class="s-dot dot-neu"></span> 🏭 수요산업 · 중립</div>
+    <div class="s-chip s-pos"><span class="s-dot dot-pos"></span> ⚙️ 메이커 동향 · 긍정</div>
+    <div class="s-chip s-neg"><span class="s-dot dot-neg"></span> 💹 원자재·환율 · 부정</div>
+  </div>
+</div>
+
+<div class="archive-bar">
+  <h3>📅 브리핑 아카이브</h3>
+  <a href="2026-05-18.html">2026-05-18</a>
+</div>
+
+<div class="section">
+  <div class="sec-header c-market"><h2>📊 시장 시황</h2><span class="sec-sentiment">🔴 부정</span></div>
+  <div class="sec-body">
+    <div class="headline t-market">중동 사태 장기화, 대구·경북 베어링 공급망 '비상등'</div>
+    <div class="overview">이란 사태 장기화로 에너지·원자재 가격 불안이 지속되며 대구·경북 지역 제조업 중간재 공급망이 흔들리고 있다. 베어링을 포함한 수입 의존도 높은 기계부품의 납기 지연과 가격 인상 우려가 현실화되고 있다.</div>
+    <div class="points-title">핵심 포인트</div>
+    <table class="points">
+      <tr><th style="width:22%">구분</th><th style="width:13%">감성</th><th>내용</th></tr>
+      <tr><td><strong>공급망 비상</strong></td><td><span class="tag-neg">부정</span></td><td>이란·중동 사태로 대구·경북 제조업 공급망 전반 흔들림. 베어링·기계부품 수입 차질 우려 현실화</td></tr>
+      <tr><td><strong>납기 리스크</strong></td><td><span class="tag-neg">부정</span></td><td>텅스텐 공급망 붕괴로 초경공구 가격 급등 → 베어링 가공·납기 리스크 동반 상승 중</td></tr>
+      <tr><td><strong>물류비 상승</strong></td><td><span class="tag-neg">부정</span></td><td>국제 유가 충격으로 물류비·에너지 비용 상승. 수입 부품 유통 마진 압박 가중</td></tr>
+      <tr><td><strong>로봇부품 수요</strong></td><td><span class="tag-pos">긍정</span></td><td>TSMC 공급계약 여파로 로봇·반도체 공정용 베어링 수요 모멘텀 재부각</td></tr>
+    </table>
+    <div class="points-title">심층 분석</div>
+    <div class="analysis-list">
+      <div class="analysis-item b-market"><strong>대구·경북 복합 충격 반복 구조</strong><p>오일쇼크→이란 사태로 이어지는 대구·경북 경제의 반복된 복합충격. 전자부품·자동차 전장·베어링·화학소재 등 핵심 중간재를 수입에 의존하는 구조적 취약성 재확인.</p></div>
+      <div class="analysis-item b-market"><strong>텅스텐 공급망 붕괴의 연쇄효과</strong><p>"돈 줘도 물건이 없다"는 텅스텐 부족이 초경공구→가공원가→납기 리스크로 연결. 자동차부품·금형·반도체 장비 가공 분야 전방위 확산.</p></div>
+      <div class="analysis-item b-market"><strong>AI 예측정비 시대의 영업 기회</strong><p>AI 기반 예측정비 확산으로 솔루션형 영업 전환 기회. 불안한 시황을 역이용한 재고 선확보 제안 효과적.</p></div>
+    </div>
+    <div class="sub-grid">
+      <div class="sub-box"><h4>💬 거래처 대화 소재</h4><ul><li>중동 사태로 베어링 납기 얼마나 영향 받나요?</li><li>텅스텐 공급 부족, 공구비 상승 체감하시나요?</li><li>물류비 상승으로 수입 부품 가격 올랐죠?</li><li>로봇 공정용 베어링 사양 변경 검토 중이신가요?</li></ul></div>
+      <div class="sub-box"><h4>👁 이번 주 모니터링</h4><ul><li>중동 사태 추가 확전 여부 및 물류 항로 영향</li><li>텅스텐·공구 가격 추가 인상 동향</li><li>대구·경북 지역 제조업체 발주 취소·연기 여부</li></ul></div>
+      <div class="action-box b-market" style="background:#FFF9F0"><h4 class="t-market">🎯 오늘의 영업 액션</h4><p>주요 거래처에 "납기 지연 전 미리 확보" 긴급 안내 연락 실시</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-header c-demand"><h2>🏭 수요산업</h2><span class="sec-sentiment">🟡 중립</span></div>
+  <div class="sec-body">
+    <div class="headline t-demand">소부장 투자 1,700억 확대, 제조업 생산 3%↑…반도체 의존 여전</div>
+    <div class="overview">산업부가 첨단전략산업 소부장 투자지원금을 1,700억 규모로 확대하며 로봇·방산을 신규 포함했다. 1분기 제조업 생산은 3.0% 증가했으나 반도체(14.1%↑)가 견인한 결과로, 비반도체 업종은 부진하다.</div>
+    <div class="points-title">핵심 포인트</div>
+    <table class="points">
+      <tr><th style="width:22%">구분</th><th style="width:13%">감성</th><th>내용</th></tr>
+      <tr><td><strong>소부장 투자 확대</strong></td><td><span class="tag-pos">긍정</span></td><td>국가첨단전략산업 소부장 투자지원금 1,700억. 반도체·이차전지·바이오·디스플레이·로봇·방산 6개 분야</td></tr>
+      <tr><td><strong>제조업 생산 증가</strong></td><td><span class="tag-neu">중립</span></td><td>1분기 제조업 생산 전분기 대비 3.0% 증가. 반도체 14.1%가 성장 견인. 비반도체 업종 증가율 미미</td></tr>
+      <tr><td><strong>삼중 리스크</strong></td><td><span class="tag-neg">부정</span></td><td>반도체 훈풍 속 파업·물가 상승·환율 1,500원대 삼중 리스크. 소부장 협력사 부담 전가 가능성</td></tr>
+      <tr><td><strong>하반기 확산 기대</strong></td><td><span class="tag-pos">긍정</span></td><td>하반기 기계·조선·방산 등 산업재로 투자 확산 전망</td></tr>
+    </table>
+    <div class="points-title">심층 분석</div>
+    <div class="analysis-list">
+      <div class="analysis-item b-demand"><strong>로봇·방산 신규 포함의 의미</strong><p>기존 4대 첨단산업에 로봇·방산 추가. 로봇 관절·구동부 핵심 부품인 베어링·LM가이드 수요 증가 기대. 비수도권(대구·경북) 기업 지원 비율 80% 적용.</p></div>
+      <div class="analysis-item b-demand"><strong>반도체 설비투자 → 베어링 직결 연결고리</strong><p>반도체 장비 투자 증가는 정밀 볼스크류·LM가이드·각접촉 베어링 수요로 직결. 삼익THK 48% 성장이 이를 입증.</p></div>
+      <div class="analysis-item b-demand"><strong>비반도체 업종 부진 장기화 우려</strong><p>자동차·일반기계 등 전통 베어링 수요처의 발주 개선은 하반기까지 기다려야 할 전망.</p></div>
+    </div>
+    <div class="sub-grid">
+      <div class="sub-box"><h4>💬 거래처 대화 소재</h4><ul><li>반도체 설비 증설로 LM가이드 추가 발주 계획?</li><li>로봇 라인 도입 시 베어링 사양 상담 가능합니다</li><li>소부장 지원금 신청하셨나요?</li><li>방산 라인 확대로 정밀 베어링 수요 생기셨나요?</li></ul></div>
+      <div class="sub-box"><h4>👁 이번 주 모니터링</h4><ul><li>삼성전자 파업 현실화 여부 및 소부장 영향</li><li>소부장 투자지원금 신청 마감 일정 확인</li><li>하반기 기계·조선 설비투자 발주 신호 포착</li></ul></div>
+      <div class="action-box" style="border-color:#185FA5;background:#F0F5FF"><h4 class="t-demand">🎯 오늘의 영업 액션</h4><p>반도체·로봇 라인 보유 거래처 — 소부장 투자지원금 활용 설비 증설 시 베어링·LM가이드 선사양 검토 제안</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-header c-maker"><h2>⚙️ 메이커 동향</h2><span class="sec-sentiment">🟢 긍정</span></div>
+  <div class="sec-body">
+    <div class="headline t-maker">삼익THK 베어링 매출 48%↑…반도체 수혜·대만 수출 확대</div>
+    <div class="overview">삼익THK의 베어링 부문이 반도체 업황 회복과 대만 고객사향 수출 확대에 힘입어 전년 대비 48% 급증했다. NSK·SKF 등 글로벌 메이커 6대 업체는 세계시장 34%를 점유하며 독과점 구조를 유지 중이다.</div>
+    <div class="points-title">핵심 포인트</div>
+    <table class="points">
+      <tr><th style="width:22%">구분</th><th style="width:13%">감성</th><th>내용</th></tr>
+      <tr><td><strong>삼익THK 실적 급등</strong></td><td><span class="tag-pos">긍정</span></td><td>베어링 부문 매출 48% 증가. 반도체 업황 회복 + 대만 TSMC향 수출 확대. 로봇부품주 모멘텀 재부각</td></tr>
+      <tr><td><strong>NSK 윤활관리 이슈</strong></td><td><span class="tag-neu">중립</span></td><td>NSK 분석: 공작기계용 베어링 고장 70% 이상이 윤활 불량·오염. 정기 윤활관리 서비스 영업 기회</td></tr>
+      <tr><td><strong>영주 베어링 클러스터</strong></td><td><span class="tag-pos">긍정</span></td><td>경북 영주 첨단베어링 집적화 거점 구축 추진. 장기적 국내 공급 안정화 기대</td></tr>
+      <tr><td><strong>정밀부품 고도화</strong></td><td><span class="tag-pos">긍정</span></td><td>인덱스 드라이브·캠분할기 등 초정밀 구동부품 수요 증가. 예압 기술 중심 프리미엄 제품 수요↑</td></tr>
+    </table>
+    <div class="points-title">심층 분석</div>
+    <div class="analysis-list">
+      <div class="analysis-item b-maker"><strong>삼익THK 48% 성장의 시사점</strong><p>반도체 설비 투자 → 정밀 LM가이드·볼스크류·각접촉 베어링 수요 급증 → 삼익THK 수혜. 대구·경북 유통상도 관련 제품 재고 선확보 검토 필요.</p></div>
+      <div class="analysis-item b-maker"><strong>NSK 윤활 불량 분석의 영업 활용법</strong><p>NSK 공식 데이터(고장 70%=윤활 불량)를 근거로 정기 윤활관리 + 베어링 교체 패키지 제안. 예방정비를 통한 관계 강화 및 소모품 정기 납품 계약 유도.</p></div>
+      <div class="analysis-item b-maker"><strong>글로벌 메이저 6사 독과점 구조 심화</strong><p>NSK·SKF·셰플러·NTN·TIMKEN 등 상위 6사 세계시장 34% 장악. 공급망 불안 시 납기 지연 최우선 발생. 대체 브랜드 라인업 확보가 리스크 헤지 전략.</p></div>
+    </div>
+    <div class="sub-grid">
+      <div class="sub-box"><h4>💬 거래처 대화 소재</h4><ul><li>삼익THK LM가이드 납기 빨라지고 있습니다</li><li>NSK 베어링 윤활 관리 점검 서비스 소개</li><li>반도체 장비용 초정밀 베어링 재고 확보했습니다</li><li>HIWIN·SBC 대체품으로 납기 단축 가능합니다</li></ul></div>
+      <div class="sub-box"><h4>👁 이번 주 모니터링</h4><ul><li>삼익THK·NSK 2분기 수주·납기 변동 확인</li><li>HIWIN·SBC LM가이드 가격 인상 공문 여부</li><li>영주 베어링 클러스터 정책 지원 일정</li></ul></div>
+      <div class="action-box" style="border-color:#0F6E56;background:#F0FAF6"><h4 class="t-maker">🎯 오늘의 영업 액션</h4><p>반도체 설비 보유 거래처에 LM가이드·각접촉 베어링 선제 견적 발송</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-header c-forex"><h2>💹 원자재·환율</h2><span class="sec-sentiment">🔴 부정</span></div>
+  <div class="sec-body">
+    <div class="headline t-forex">원달러 1,503원 돌파…중동·달러 강세 이중 압박</div>
+    <div class="overview">원달러 환율이 심리적 마지노선 1,500원을 넘어 1,503.78원까지 상승했다. 중동 리스크로 인한 달러 강세와 외국인 자금 이탈이 맞물리며 수입 베어링 원가 상승 압박이 가중되고 있다.</div>
+    <div class="points-title">핵심 포인트</div>
+    <table class="points">
+      <tr><th style="width:22%">구분</th><th style="width:13%">감성</th><th>내용</th></tr>
+      <tr><td><strong>환율 1,500원 돌파</strong></td><td><span class="tag-neg">부정</span></td><td>원달러 환율 1,503.78원 기록. 심리적 저항선 붕괴. 수입 베어링·LM가이드 원가 직접 상승</td></tr>
+      <tr><td><strong>생산자물가 변수</strong></td><td><span class="tag-neg">부정</span></td><td>유가 하락으로 수입물가 일부 완화됐으나 환율 상승이 생산자물가 상승 압력으로 잔존</td></tr>
+      <tr><td><strong>코스피 변동성 확대</strong></td><td><span class="tag-neg">부정</span></td><td>매도 사이드카 발동 후 급반등. 중동 리스크 + AI 대장주 차익실현으로 시장 불안정성 지속</td></tr>
+      <tr><td><strong>유가 하락 부분 완화</strong></td><td><span class="tag-neu">중립</span></td><td>국제 유가 하락으로 물류비 일부 완화. 환율 강세가 상쇄하여 실질 원가 절감 효과 제한적</td></tr>
+    </table>
+    <div class="points-title">심층 분석</div>
+    <div class="analysis-list">
+      <div class="analysis-item b-forex"><strong>1,500원대 환율의 베어링 유통 영향</strong><p>환율 1,400→1,500원이면 수입 베어링 원가 약 7% 상승. 가격 전가 여부가 유통 마진 방어의 핵심.</p></div>
+      <div class="analysis-item b-forex"><strong>중동·달러 강세 복합 충격</strong><p>중동 리스크 + 외국인 자금 이탈 → 원화 약세 구조 심화. 단기간 내 환율 안정화 어려워 수입 부품 가격 협상 난항 예상.</p></div>
+      <div class="analysis-item b-forex"><strong>가격 인상 선제 대응 전략</strong><p>메이커 가격 인상 공문 발송 가능성. 거래처에 미리 안내하고 현재 가격으로 선 발주 유도가 효과적.</p></div>
+    </div>
+    <div class="sub-grid">
+      <div class="sub-box"><h4>💬 거래처 대화 소재</h4><ul><li>환율 1,500원 돌파로 수입 베어링 가격 올라요</li><li>지금 가격에 선 발주하시면 인상 전 확보 가능</li><li>원/엔 환율도 확인하셨나요? 일제 부품 체크 필요</li><li>유가 내렸지만 환율 때문에 물류비 체감 비슷해요</li></ul></div>
+      <div class="sub-box"><h4>👁 이번 주 모니터링</h4><ul><li>원달러 환율 1,510원선 돌파 여부</li><li>NSK·SKF 등 메이커 가격 인상 공문 수신 여부</li><li>국제 유가(WTI·브렌트) 방향성 확인</li></ul></div>
+      <div class="action-box" style="border-color:#534AB7;background:#F3F2FF"><h4 class="t-forex">🎯 오늘의 영업 액션</h4><p>환율 1,500원 돌파 이슈로 주요 거래처에 "가격 인상 전 선발주 안내" 카톡 발송</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="refs">
+  <h3>📎 참고 기사</h3>
+  <ul>
+    <li><a href="https://n.news.naver.com/mnews/article/421/0008832802">중동 사태 장기화에 대구·경북 제조업계 비상 (뉴스1, 2026.03.18)</a></li>
+    <li><a href="https://www.mtnews.net/news/articleView.html?idxno=24593">텅스텐 공급망 붕괴, 흔들리는 K-기계산업 (MT뉴스, 2026.04.22)</a></li>
+    <li><a href="https://www.todayenergy.kr/news/articleView.html?idxno=297950">산업부 소부장 투자지원금 1700억 확대 (투데이에너지, 2026.05.18)</a></li>
+    <li><a href="http://www.kbiznews.co.kr/news/articleView.html?idxno=114142">1분기 제조업 생산 3.0% 증가 (중기뉴스, 2026.05.18)</a></li>
+    <li><a href="http://www.finomy.com/news/articleView.html?idxno=247902">삼익THK 베어링 부문 매출 48% 증가 (파이노미, 2026.01.17)</a></li>
+    <li><a href="https://www.mtnews.net/news/articleView.html?idxno=23854">NSK 베어링 고장 70%는 윤활 실패 (MT뉴스, 2026.02.07)</a></li>
+    <li><a href="https://biz.newdaily.co.kr/site/data/html/2026/05/18/2026051800040.html">원달러 1,503원 돌파 (뉴데일리, 2026.05.18)</a></li>
+    <li><a href="https://n.news.naver.com/mnews/article/648/0000047203">유가 하락·환율 변수 (비즈워치, 2026.05.15)</a></li>
+  </ul>
+</div>
+<div class="footer">태광베어링 업황 브리핑 · AI 자동 생성 · 2026년 5월 18일</div>
+<button class="print-btn" onclick="window.print()">🖨️ PDF로 저장</button>
+</div>
+</body>
+</html>
