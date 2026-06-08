@@ -6,88 +6,95 @@
 <title>태광베어링 업황 브리핑 2026-06-08</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Malgun Gothic', sans-serif; background: #f0f0f0; color: #222; font-size: 13px; line-height: 1.6; }
-  .page-wrap { background: #fff; max-width: 820px; margin: 0 auto; box-shadow: 0 2px 16px rgba(0,0,0,0.13); }
+  body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f0f0f0; color: #222; font-size: 13px; line-height: 1.65; }
+  .page-wrap { max-width: 820px; margin: 0 auto; background: #fff; box-shadow: 0 2px 16px rgba(0,0,0,0.14); }
 
   /* 표지 */
-  .cover { padding: 48px 40px 36px; border-bottom: 3px solid #BA7517; page-break-after: always; }
-  .cover-logo { font-size: 22px; font-weight: 700; color: #BA7517; letter-spacing: 2px; margin-bottom: 6px; }
-  .cover-sub { font-size: 13px; color: #888; margin-bottom: 28px; }
-  .cover-title { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
-  .cover-date { font-size: 16px; color: #555; margin-bottom: 28px; }
-  .cover-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+  .cover { padding: 44px 40px 32px; page-break-after: always; border-bottom: 4px solid #BA7517; }
+  .cover-brand { font-size: 26px; font-weight: 800; color: #BA7517; letter-spacing: 1px; margin-bottom: 4px; }
+  .cover-sub { font-size: 12.5px; color: #888; margin-bottom: 24px; }
+  .cover-title { font-size: 22px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .cover-date { font-size: 14px; color: #555; margin-bottom: 22px; }
+  .cover-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .chip { display: inline-flex; align-items: center; gap: 5px; padding: 5px 13px; border-radius: 20px; font-size: 12.5px; font-weight: 700; }
   .chip-pos { background: #EAF3DE; color: #3B6D11; }
   .chip-neu { background: #FAEEDA; color: #854F0B; }
   .chip-neg { background: #FAECE7; color: #993C1D; }
-  .cover-fx { font-size: 13px; color: #555; border-top: 1px solid #eee; padding-top: 12px; margin-top: 8px; }
-  .btn-print { margin-top: 20px; padding: 9px 22px; background: #BA7517; color: #fff; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: 'Malgun Gothic', sans-serif; }
+  .cover-fx { font-size: 12.5px; color: #555; border-top: 1px solid #e8e8e8; padding-top: 12px; margin-top: 6px; }
+  .btn-print { margin-top: 18px; padding: 9px 24px; background: #BA7517; color: #fff; border: none; border-radius: 5px; font-size: 13px; cursor: pointer; font-family: 'Malgun Gothic', sans-serif; font-weight: 700; }
+  .btn-print:hover { background: #9a6110; }
 
   /* 섹션 공통 */
-  .section { padding: 32px 40px 28px; page-break-before: always; }
-  .section-header { padding: 10px 16px; border-radius: 6px; color: #fff; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
-  .section-headline { font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 10px 0 6px; }
-  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 8px; }
+  .section { padding: 30px 40px 26px; page-break-before: always; }
+  .section-header { display: inline-block; padding: 8px 18px; border-radius: 5px; color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+  .section-headline { font-size: 17px; font-weight: 700; color: #1a1a1a; margin-bottom: 5px; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 12px; font-size: 11px; font-weight: 700; margin-left: 6px; vertical-align: middle; }
   .badge-pos { background: #EAF3DE; color: #3B6D11; }
-  .badge-neu { background: $FAEEDA; color: #854F0B; }
+  .badge-neu { background: #FAEEDA; color: #854F0B; }
   .badge-neg { background: #FAECE7; color: #993C1D; }
-  .overview { background: #f8f8f8; border-left: 4px solid #ccc; padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; font-size: 13px; color: #444; }
+  .overview { border-left: 4px solid #ccc; padding: 9px 14px; background: #f8f8f8; border-radius: 3px; margin-bottom: 15px; font-size: 12.5px; color: #444; line-height: 1.7; }
 
   /* 핵심 포인트 테이블 */
-  .kp-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
-  .kp-table th { background: #f4f4f4; padding: 7px 10px; text-align: left; font-size: 12px; color: #555; border: 1px solid #e0e0e0; }
-  .kp-table td { padding: 7px 10px; border: 1px solid #e8e8e8; font-size: 12.5px; vertical-align: top; }
-  .kp-table tr:nth-child(even) td { background: #fafafa; }
+  .kp-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 12.5px; }
+  .kp-table th { padding: 7px 10px; text-align: left; color: #fff; font-size: 12px; font-weight: 700; }
+  .kp-table td { padding: 7px 10px; border-bottom: 1px solid #ececec; vertical-align: top; }
+  .kp-table tr:last-child td { border-bottom: none; }
+  .kp-table tr:hover td { background: #fafafa; }
 
-  /* 심층 분석 */
-  .analysis-box { margin-bottom: 10px; padding: 10px 14px; border-radius: 4px; }
-  .analysis-box strong { display: block; font-size: 13px; margin-bottom: 3px; }
-  .analysis-box p { font-size: 12.5px; color: #444; }
+  /* 심층 분석 박스 */
+  .analysis-box { margin-bottom: 9px; padding: 10px 14px; border-radius: 4px; border-left: 3px solid; }
+  .analysis-title { font-size: 12.5px; font-weight: 700; margin-bottom: 4px; }
+  .analysis-body { font-size: 12px; color: #444; line-height: 1.65; }
 
   /* 액션·모니터링 */
-  .action-box { background: #FFF8EE; border: 1px solid #F4C97A; border-radius: 6px; padding: 10px 14px; margin-bottom: 10px; }
-  .action-box .label { font-size: 11px; font-weight: 700; color: #854F0B; margin-bottom: 4px; }
-  .monitor-box { background: #F0F5FF; border: 1px solid #B0C8F5; border-radius: 6px; padding: 10px 14px; }
-  .monitor-box .label { font-size: 11px; font-weight: 700; color: #185FA5; margin-bottom: 4px; }
-  .monitor-box ul { padding-left: 16px; }
-  .monitor-box li { font-size: 12.5px; color: #333; margin-bottom: 2px; }
+  .action-box { background: #FFF8EE; border: 1px solid #F0D08A; border-radius: 5px; padding: 9px 14px; margin-bottom: 9px; font-size: 12.5px; }
+  .action-label { font-weight: 700; color: #854F0B; }
+  .monitor-box { background: #F0F5FF; border: 1px dashed #AABFEE; border-radius: 5px; padding: 9px 14px; font-size: 12.5px; }
+  .monitor-label { font-weight: 700; color: #185FA5; }
+  .monitor-item { margin-bottom: 3px; }
 
   /* 지역 카드 */
-  .region-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
-  .region-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #2E7D32; }
-  .region-card .region-meta { font-size: 11.5px; color: #555; margin-bottom: 6px; }
-  .region-card .temp { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
-  .region-card ul { padding-left: 16px; }
-  .region-card li { font-size: 12.5px; color: #333; margin-bottom: 2px; }
-  .region-card .rec { margin-top: 6px; font-size: 12px; color: #185FA5; font-weight: 600; }
+  .region-card { border: 1px solid #ddd; border-radius: 6px; padding: 13px 16px; margin-bottom: 12px; }
+  .region-title { font-size: 13.5px; font-weight: 700; margin-bottom: 7px; }
+  .region-row { font-size: 12px; color: #333; margin-bottom: 5px; line-height: 1.6; }
+  .region-temp { font-size: 13.5px; font-weight: 700; margin: 6px 0 7px; }
+  .region-rec { font-size: 12px; font-weight: 700; margin-top: 7px; }
 
   /* 메이커 테이블 */
-  .maker-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 12px; }
-  .maker-table th { background: #0F6E56; color: #fff; padding: 7px 9px; text-align: left; border: 1px solid #0a5240; }
-  .maker-table td { padding: 6px 9px; border: 1px solid #e0e0e0; vertical-align: top; }
-  .maker-table tr:nth-child(even) td { background: #f5faf8; }
+  .maker-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 12px 0 14px; }
+  .maker-table th { background: #0F6E56; color: #fff; padding: 7px 9px; text-align: left; }
+  .maker-table td { padding: 7px 9px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .maker-table tr:nth-child(even) td { background: #f6fbf9; }
+  .maker-table tr:hover td { background: #eef7f3; }
 
-  /* 참고 기사 */
-  .refs { margin-top: 30px; padding: 16px 40px 20px; border-top: 2px solid #eee; }
-  .ref-cat { font-size: 13px; font-weight: 700; color: #333; margin: 12px 0 6px; }
-  .refs a { display: block; font-size: 12px; color: #185FA5; text-decoration: none; padding: 2px 0; }
+  /* 참고기사 */
+  .refs { padding: 18px 40px 22px; background: #f8f8f8; border-top: 1px solid #e4e4e4; }
+  .refs h3 { font-size: 13.5px; font-weight: 700; color: #333; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #ddd; }
+  .ref-cat { font-size: 12.5px; font-weight: 700; color: #444; margin: 11px 0 5px; }
+  .refs a { display: block; font-size: 11.5px; color: #185FA5; text-decoration: none; margin-bottom: 3px; line-height: 1.55; }
   .refs a:hover { text-decoration: underline; }
 
   /* 푸터 */
-  .footer { text-align: center; padding: 14px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; background: #f8f8f8; }
+  .footer { text-align: center; padding: 13px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; background: #fafafa; }
 
   /* 색상 */
   .hdr-market { background: #BA7517; }
-  .hdr-region { background: #2E7D32; }
-  .hdr-demand { background: #185FA5; }
-  .hdr-robot  { background: #7B3FA5; }
-  .hdr-maker  { background: #0F6E56; }
-  .analysis-market { border-left: 3px solid #BA7517; background: #FDF6EB; }
-  .analysis-region { border-left: 3px solid #2E7D32; background: #F0F7F0; }
-  .analysis-demand { border-left: 3px solid #185FA5; background: #EDF3FC; }
-  .analysis-robot  { border-left: 3px solid #7B3FA5; background: #F5EFF9; }
-  .analysis-maker  { border-left: 3px solid #0F6E56; background: #EAF5F2; }
+  .hdr-region  { background: #2E7D32; }
+  .hdr-demand  { background: #185FA5; }
+  .hdr-robot   { background: #7B3FA5; }
+  .hdr-maker   { background: #0F6E56; }
+  .ov-market { border-color: #BA7517; }
+  .ov-region  { border-color: #2E7D32; }
+  .ov-demand  { border-color: #185FA5; }
+  .ov-robot   { border-color: #7B3FA5; }
+  .ov-maker   { border-color: #0F6E56; }
+  .ab-market { border-color: #BA7517; background: #FEF7EC; }
+  .ab-region  { border-color: #2E7D32; background: #EFF7EF; }
+  .ab-demand  { border-color: #185FA5; background: #EDF3FD; }
+  .ab-robot   { border-color: #7B3FA5; background: #F4EFF9; }
+  .ab-maker   { border-color: #0F6E56; background: #EBF6F2; }
 
+  @page { size: A4; margin: 18mm 15mm; }
   @media print {
     .btn-print { display: none; }
     .analysis-box, .action-box, .monitor-box, .region-card,
@@ -96,12 +103,14 @@
       page-break-inside: avoid;
     }
     .kp-table tr, .kp-table thead { break-inside: avoid; page-break-inside: avoid; }
+    .maker-table tr, .maker-table thead { break-inside: avoid; page-break-inside: avoid; }
     .section-header  { break-after: avoid; page-break-after: avoid; }
     .section-headline { break-after: avoid; page-break-after: avoid; }
     .overview { break-after: avoid; page-break-after: avoid; }
     .ref-cat { break-after: avoid; page-break-after: avoid; }
     .refs a  { break-inside: avoid; page-break-inside: avoid; }
-    @page { size: A4; margin: 18mm 15mm; }
+    body { background: #fff; }
+    .page-wrap { box-shadow: none; }
   }
 </style>
 </head>
@@ -110,292 +119,279 @@
 
 <!-- ===== 표지 ===== -->
 <div class="cover">
-  <div class="cover-logo">태광베어링</div>
-  <div class="cover-sub">베어링 · LM가이드 · 볼스크류 유통 전문</div>
+  <div class="cover-brand">태광베어링</div>
+  <div class="cover-sub">베어링 · LM가이드 · 볼스크류 유통 전문 | 대구·경북 / 수도권 / 천안·아산</div>
   <div class="cover-title">업황 브리핑</div>
   <div class="cover-date">2026년 6월 8일 (월) · 자동 생성</div>
   <div class="cover-chips">
     <span class="chip chip-neu">📊 시장 시황 &nbsp;중립</span>
     <span class="chip chip-neu">🗺️ 지역 온도계 &nbsp;중립</span>
-    <span class="chip chip-pos">🏭 수요 산업 &nbsp;긍정</span>
+    <span class="chip chip-neu">🏭 수요산업 &nbsp;중립</span>
     <span class="chip chip-pos">🤖 로봇·자동화 &nbsp;긍정</span>
     <span class="chip chip-neu">⚙️ 메이커 동향 &nbsp;중립</span>
   </div>
-  <div class="cover-fx">💹 환율 현황 | 원/달러 <strong>1,550원대</strong> (외환위기 이후 최고, 수입 베어링 원가 10~15% 상승 압박) &nbsp;·&nbsp; 원/엔 약 <strong>10.6원</strong></div>
+  <div class="cover-fx">
+    💹 <strong>환율:</strong> 원/달러 <strong>1,539~1,550원대</strong> (외환위기 이후 최고치) ·
+    수입 베어링·LM가이드 원가 <strong>8~12% 인상 압박</strong> 진행 중 (2026.06.07 매일경제·한겨레 보도 기준)
+  </div>
   <button class="btn-print" onclick="window.print()">🖨️ PDF 저장 / 인쇄</button>
 </div>
 
 <!-- ===== 1. 시장 시황 ===== -->
 <div class="section">
   <div class="section-header hdr-market">📊 시장 시황</div>
-  <div class="section-headline">설비투자 확대 기대감·고환율 원가 이중고<span class="badge badge-neu">중립</span></div>
-  <div class="overview">반도체 설비투자 가속화로 산업용 베어링·LM가이드 수요 기대감 상승. 단, 원달러 1,550원대 고환율로 수입 제품 원가 10~15% 상승 압박 지속. 제조업 체감경기(BSI 62)는 기준치 100 하회로 냉랭.</div>
+  <div class="section-headline">고환율·AI투자 강세 속 베어링 수요 양극화<span class="badge badge-neu">중립</span></div>
+  <div class="overview ov-market">반도체·AI 설비투자 증가로 정밀부품 수요 긍정적이나, 원/달러 1,550원대 고환율이 수입 베어링 원가를 직격하며 시장 전반이 양극화 국면에 접어들고 있다. 내수 체감경기는 여전히 부진(대구 제조업 BSI 62)하나 수출·AI 연동 수요처는 확대세.</div>
 
   <table class="kp-table">
     <thead>
-      <tr><th style="width:28%">소제목</th><th style="width:12%">감성</th><th>내용</th></tr>
+      <tr>
+        <th class="hdr-market" style="width:24%">소제목</th>
+        <th class="hdr-market" style="width:12%">감성</th>
+        <th class="hdr-market">내용</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>반도체 설비투자 이동</strong></td>
+        <td><strong>AI 설비투자 확대</strong></td>
         <td><span class="badge badge-pos">긍정</span></td>
-        <td>메모리 업황 중심축이 가격 상승→설비투자로 이동. 삼성전자 평택 P4 조기 집행·SK하이닉스 청주 M15X·용인 클러스터 가속화로 산업용 베어링 수요 기대.</td>
+        <td>SK하이닉스-엔비디아 AI 팩토리 동맹 체결, 반도체 생산 자동화 확장으로 정밀 LM가이드·볼스크류 발주 증가 기대. 삼성전자 P5 NAND 라인 2028년 할당 예정.</td>
       </tr>
       <tr>
         <td><strong>고환율 원가 압박</strong></td>
         <td><span class="badge badge-neg">부정</span></td>
-        <td>원달러 1,550원대 유지로 NSK·NTN·FAG 수입 베어링 납품 원가 10~15% 상승. 건축·제조업계 원자재 63% 급등 신호와 동조.</td>
+        <td>원/달러 1,550원대(외환위기 이후 최고치) 지속으로 NSK·SKF·THK 수입 베어링 단가 8~12% 인상 가시화. 대구 산업계 "팔수록 손해" 구조 보도.</td>
       </tr>
       <tr>
-        <td><strong>체감경기 냉랭 지속</strong></td>
-        <td><span class="badge badge-neg">부정</span></td>
-        <td>대구 제조업 BSI 62 (기준치 100 하회). 외형(생산) 회복세에도 자금 압박으로 실질 구매 결정 지연. 수요 회복 하반기 이후 전망.</td>
+        <td><strong>국산 대체 기회</strong></td>
+        <td><span class="badge badge-neu">중립</span></td>
+        <td>수입품 가격 상승 시 삼익THK·SBC 등 국산 LM가이드 경쟁력 상대적 개선. 고객사 대체 검토 문의 증가 가능. 하반기 국산 점유율 확대 기회.</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="analysis-box analysis-market">
-    <strong>① 베어링 수요 양극화</strong>
-    <p>반도체·2차전지 관련 정밀 베어링(크로스롤러·앵귤러콘택트) 긴급 수요 강세. 일반 기계 및 범용 베어링 수요는 관망세 지속. 제품 포트폴리오 재편 필요.</p>
+  <div class="analysis-box ab-market">
+    <div class="analysis-title" style="color:#BA7517;">▶ AI 팩토리 확산과 정밀 직선운동 부품 수요</div>
+    <div class="analysis-body">SK하이닉스-엔비디아 AI 팩토리 동맹(2026.06.08 체결)은 반도체 FAB 자동화 설비 확장으로 직결된다. 클린룸 이송·정렬 시스템에 사용되는 고정밀 THK·NSK LM가이드·볼스크류 신규 발주가 2026년 하반기~2027년 집중될 전망이다. 삼성전자 P5 NAND 라인도 2028년 착공 예정으로 중기 수요 파이프라인이 형성된다.</div>
   </div>
-  <div class="analysis-box analysis-market">
-    <strong>② 수입 원가 상승 대응이 전략</strong>
-    <p>고환율 장기화 시 국산(삼익THK·SBC) 대체 검토 고객사 증가 전망. 재고 선확보 및 납품 단가 협의 선행 대응이 경쟁우위 확보 핵심.</p>
+  <div class="analysis-box ab-market">
+    <div class="analysis-title" style="color:#BA7517;">▶ 고환율 장기화와 수입 베어링 가격 구조 변화</div>
+    <div class="analysis-body">원/달러 1,550원대는 일반적 수입 단가 책정 기준(1,300~1,350원) 대비 15% 이상 높다. 신규 발주분은 원가 상승 불가피. 고객사와 장기 단가 계약을 체결한 경우 마진 압박이 발생하므로 환율 연동 가격 정책 검토가 필요하다. 매일신문 보도처럼 대구 산업계 전반이 "투자보다 생존"을 선택하는 국면.</div>
   </div>
 
   <div class="action-box">
-    <div class="label">🎯 오늘의 영업 액션</div>
-    반도체 장비업체 방문 시 LM가이드·볼스크류 긴급 납기 대응 가능 여부 확인 및 재고 현황 적극 어필. 수입 제품 가격 인상 예고 전달로 선주문 유도.
+    <span class="action-label">💼 오늘의 영업 액션: </span>
+    수입 베어링 납기·가격 불안 고객사에 국산 SBC·삼익THK 대체 제안 및 환율 인상 반영 전 재고 선확보 견적 제시
   </div>
   <div class="monitor-box">
-    <div class="label">👁️ 이번 주 모니터링</div>
-    <ul>
-      <li>원달러 환율 1,560원 돌파 여부 (수입 원가 추가 상승 임계점)</li>
-      <li>SK하이닉스 용인 클러스터 장비 발주 일정 및 협력업체 선정 동향</li>
-    </ul>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링①</span> 원/달러 1,560원 돌파 여부 — 추가 수입 단가 인상 트리거</div>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링②</span> SK하이닉스 평택 신라인 착공 일정 및 설비 발주 규모 공시</div>
   </div>
 </div>
 
 <!-- ===== 2. 지역별 수요 온도계 ===== -->
 <div class="section">
   <div class="section-header hdr-region">🗺️ 지역별 수요 온도계</div>
-  <div class="section-headline">대경권 냉랭 · 수도권 반도체 훈풍 · 천안 산업전환 기대<span class="badge badge-neu">중립</span></div>
-  <div class="overview">3개 권역 수요 온도 차별화 뚜렷. 수도권 반도체 투자 가속으로 뜨겁고, 대경권은 체감 냉랭, 천안·아산은 디스플레이·모빌리티 전환기.</div>
+  <div class="section-headline">대경 보통 · 수도권 뜨거움 · 천안·아산 보통<span class="badge badge-neu">중립</span></div>
+  <div class="overview ov-region">수도권(반도체·AI 팩토리)이 수요를 주도하는 가운데, 대구·경북은 자동차부품 생산 증가 불구 체감경기 부진, 천안·아산은 지방선거 공약과 맞물린 첨단산업 투자 기대감이 고조.</div>
 
-  <div class="region-card">
-    <h4>📍 대구·경북 권역</h4>
-    <div class="region-meta">주요 수요처: 구미 삼성전자·LG전자, 대구 자동차부품·일반기계, 경북 벀, 경부이후 주반기계</div>
-    <div class="temp">수요 온도: ❅️ 냉각 중O
-    <ul>
-      <li>제조업 BSI 62 — 기준치 100 크게 하회, 체감경기 랼. 자금 압박�r�p��ֳ������ò�T����^��𽱤�(��������Ǯ������ַ�2����zC�>g��������w�
-������>g��î2����Ȕ���w�� ��P��zC�>g�£���J#��X��ʃ�ZӮ���"c�jP���C�������s���𽱤�(�����հ�(�����؁������ɕ����Z؃�vӲ� ������������,��첤胲zC�>g�£���J#��X���S��p胲zC�>g� ��a��£���J  추천 (생산 증�  똈화뮲문) Ⱖ 금속국미 전자부품사</div>
+  <!-- 대구·경북 -->
+  <div class="region-card" style="border-left:4px solid #2E7D32;">
+    <div class="region-title" style="color:#2E7D32;">📍 대구·경북 권역</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 구미 삼성전자·LG, 대구 자동차부품·기계금속, 경북 일반기계·방산 부품사</div>
+    <div class="region-temp">수요 온도: ✅ 보통</div>
+    <div class="region-row">🔸 <strong>핵심이슈①</strong> — 대구 제조업 업황 BSI 62(기준치 100 하회), 외형 회복에도 자금 압박·내수 부진으로 체감경기 냉랭 (아이대구 2026.06.07 보도)</div>
+    <div class="region-row">🔸 <strong>핵심이슈②</strong> — 1분기 대구 자동차 생산 전년동기대비 +8.2%, 금속가공 +18.5% 증가. 단, 고환율로 원가 부담 상승 "팔수록 손해" 구조 지속</div>
+    <div class="region-rec" style="color:#2E7D32;">🏢 방문 추천 업체 유형: 자동차부품 중소 협력사 (원가 절감형 국산 베어링 교체 제안 + 환율 인상 전 선구매 유도)</div>
   </div>
 
-  <div class="region-card">
-    <h4>📍 수도권 권역 (경기·서울)</h4>
-    <div class="region-meta">주요 수요처: 평택·화성 삼성전자, 이천·용인 SK하이닉스, 안산·시화 중소 제조업</div>
-    <div class="temp">수요 온도: 🔥 뜨거움</div>
-    <ul>
-      <li>삼성전자 평택 P4 조기 집행·SK하이닉스 용인 클러스터 동시 투자 — 반도체 장비용 정밀 베어링 긴급 수요.</li>
-      <li>SK하이닉스-엔비디아 AI 팩토리 — 설계자동화(EDA)·제조자동화 영역 협력 확대. 정밀 LM가이드·볼스크류 수요 직결.</li>
-    </ul>
-    <div class="rec">▶ 이캈 주  �-�;,�: 웰기원팔우舖이닉스8��차쯀舖욨,�� 설비업체 ¦ ؈�속꭭미 전자부품사</div>
+  <!-- 수도권 -->
+  <div class="region-card" style="border-left:4px solid #185FA5;">
+    <div class="region-title" style="color:#185FA5;">📍 수도권 권역 (경기·서울)</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 평택·화성 삼성전자·반도체 장비사, 이천 SK하이닉스, 안산·시화 중소 정밀기계 제조업</div>
+    <div class="region-temp">수요 온도: 🔥 뜨거움</div>
+    <div class="region-row">🔸 <strong>핵심이슈①</strong> — SK하이닉스-엔비디아 AI 팩토리 동맹 체결(2026.06.08), 설비 자동화·이송 시스템 발주 확대 임박</div>
+    <div class="region-row">🔸 <strong>핵심이슈②</strong> — 삼성전자 평택 P5 NAND 라인 2028년 할당 예정, 반도체 소부장·장비 선제 발주 사이클 개시 (뷰어스 2026.06.08)</div>
+    <div class="region-rec" style="color:#185FA5;">🏢 방문 추천 업체 유형: 반도체 클린룸 장비사·이송로봇 인티그레이터 (THK·NSK 고정밀 LM가이드 재고 확보 협의)</div>
   </div>
 
-  <div class="region-card">
-    <h4>📍 천안·아산 권 /K��</h4>
-    <div class="region-meta">주요 수요처: 삼성SDI㬖성전이�ٔ, 현대트랜시스, 첞안 3·4산단몠�일기계</div>
-    <div class="temp">� 8��ɩBɊ���C�)�R�;N�kS��F�c��V���Ɠ��)��X�+~�XN�+�	���N�+L+~�INȪN�Hκ���L+~�����κj�ػ�+�xR���	����x(	B�+��K4D�����ۂ�X��	^������I���Ɠ��Ɠ�وN��ث����ȹ�ȪB�N���
-�ث����ȪN����Y��Nٙ��xN�h�(	BȺ�y�����ۂ�	^��*�kN�x+~�;�ȪN�κY��Y�+Bȉ�ɩB�	��9����Ɠ���V���F�b6�73�'&V2#�)kb��N�(��;�����˂�iN�)âوN��ث����ȹ�ȪBى�
-^�*�+r�+��K�INȪN�Hκ���B�JN��N�x^�+B+r�)��X�>�+�����λ	����8N�*���F�c���F�c���F�cࠣ��������2�ȉ�ɩB�+�xR���������F�b6�73�'6V7F���#��F�b6�73�'6V7F���ֆVFW"�G"�FV��B#�	���ȉ�ɩB�+�xS��F�c��F�b6�73�'6V7F���ֆVFƖ�R#�	���N�+L+t��ʞ�j�j�؊�����h�+r������
-��9��+�	��J�7�6�73�&&FvR&FvR��2#��	S��7����F�c��F�b6�73�&�fW'f�Wr#N����j��	���N�+B�JN��N؊����Nٙ��;���ʞ�j�j�ٙ^�+��B�*�kN�x+t�ޫ��N�9��8��Bȉ�ɩN�[��*��ۂ����Z�������
-��9��+�9��+��"R�iޫ ȉ�&�;&f;f%{'/;&�:� ;"&;&�:�$;('H;f�:�����]����X�H�\��H��]X�H���XY�����[OH��Y��	H��!�;(':�O���[OH��Y�L�H���$;!,O����;&�O�������XY����O��������ۙϺ�&:��;,�;#.H;b+;'�:� ;!�O���ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[������ �;!,{(!;'�;c�{`�H;(l:�,;)�{e�p����ef;'m:��{"�;,�{(�LMV0��&�{'n;`m:��;"�;a,:��{"�;b+;'��;!�:��;'�p��'�z�a;%�{,�;"&;(�;)�z� 8���; �;%�{&�H:�;%�:��H;%�:��H;"&;&�;)�z� ��������������ۙϐRH;c*{a�:�;'�:��{fe;fez� ���ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[��������ef;'m:��{"�z��:�%;%aRH;c*{a�:�;c#;b�:�";"�H8�%;!):��;'�:��{fe
-QJp��(';(l;'�:��{fe;& {%�H;f$z�)H;fez� �;(%z� z� ;'m:��0����;"�;`k:�f;"&;&�;)�z����������������ۙϻ'�:��{,*; �{ ���H;)�z� ���ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[����������az��:�,:� :�k;'�:��{,*; �{ �;(!:�a:��z�,:� :�a��H;)�z� �:�";!�z� :��p��(!;'�;a�{"�:��MIH;'m; �H;)�z� �:��;d�;"&;&�;($;)�;( H;f�:��K�����������O���X�O���]��\��H�[�[\�\�X��[�[\�\�Y[X[������ۙϸ�h:�&:��;,�;!�:��;'�H;"&;f':�k:�!���ۙς���e:�:�:�&:��;,�;!):�a;b+;'�;fez� :�k:�!;%�;!';'�z�a:�;(%z� z� ;'m:��0����;"�;`k:�f:�d;,�;(�:�,:��:�:� :�{!,H:᤻'c�;'�z�a:�e;'m;.�;& {%�H:�%{fe:� ;!(;e�H;"&;&�;fez��;'f;em{"������]���]��\��H�[�[\�\�X��[�[\�\�Y[X[������ۙϸ�hH;'m;,*;(!;)�;!):�a:�:��;a,:��O���ۙς�� �;!,T�H;,�;%b0��%a; �:�o;'n;l�:� ;!c;'m;%�:��;)�;!�H;fe{'n;ea;&��;'m;,*;(!;)�;'�z�a:�:��;(%z� :��;"�;`k:�f:� :��H;"&;&�;,�:�g;!(;($;& {%�H;(!:�H;"&:�H:��;'�K�����]����]��\��H�X�[ۋX�����]��\��H�X�[��'��;&):�;'f;& {%�H;%h{!f�]���;c�{`�p��fe;!,H:�&:��;,�;'�z�a;%�{,�:� ; �H;(%z� :�;%�:��J;%mz��:��;/f;`�{b�0��`k:�g;"�:�i:��
-H:�z�,:��;-�H;(';%b;)�{)$H:�*z�.�:�-:�"H;'�:��:��;'(;d�:�H:�z�gH;f!;'�H;(';"����]���]��\��H�[ۚ]܋X�����]��\��H�X�[��'�`{�#�;'m:�;(�:�:��;a,:��O�]���[��O� �;!,{(!;'�;c�{`�H;'�z�a;f$z�){ �:�';(�;'o;(%H
-:�&:��;,�;'�z�a:�);b�;&�;`k;a�{em;fe{'n
-O�O��O���ef;'m:��{"�LMV;,�{(�:�o;'n:� :��H;"�;($:�#�;'�z�a:��z�"H;'o;(%O�O���[���]����]����KKHOOOOH�:�g:�!��'�:��{feOOOOHKO��]��\��H��X�[ۈ���]��\��H��X�[ۋZXY\��\�؛���'�%�:�g:�!��'�:��{fe�]���]��\��H��X�[ۋZXY[�H���/:�f0��(';(l;'�:��{fe;b+;'�:�"{)�H0��z� ;'m:��;"&;&�;)�z���[��\��H��Y�H�Y�K\�ȏ��#{(%O��[���]���]��\��H�ݙ\��Y]ȏ�%a:��;(m;,*;!.:� :�/:�f:�g:�!�	�e!:�g;ac;&�;"�	�:��z�':�#�;'(:��HL;%�H;'(:�g;b+;'�; �;'mU�:�g:�!�;"&;f';(�:��:� K�;(!;!.:��;)�{!(;'m;!�H:��;d�;"&;&�; �{"�H:�k;(l��]����X�H�\��H��]X�H���XY�����[OH��Y��	H��!�;(':�O���[OH��Y�L�H���$;!,O����;&�O�������XY����O��������ۙϻ%a:��;(m:�/:�f:�g:�!�:� :��:�;b+;'����ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[������%a:��;(m;,*;!.:� ;'�;'*:�/:�f:�g:�!�	�e!:�g;ac;&�;"�	�:��z�';'(:��HL;%�H;'(:�g;!):�a;b+;'�:�';dg�:�/:�f;'�:��{fez� ;'m:��0����;"�;`k:�f:� :�g:�;"&;&�:�"{)�H;"�;f.��������������ۙϻ �;'mU�:�g:�!�;"&;f';(�:��:� O���ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[�������*{ �0���g:�!�; �;%�H;!,{'�H;"&;f';(�:�g; �;'mU�;(�:�K�z� ;'m:��:�kz�:� ;dg:��z�"{ �:�g;($;'(;'*:�*{%�;(!:�H;'(;f���������������ۙϔ��ef;'m:��{"�z��:�%;%a;(';(l;'�:��{fe���ۙϏ�����[��\��H��Y�H�Y�K\�ȏ��#{(%O��[��������ef;'m:��{"�z��:�%;%aRH:�/:�f:�;c#;b�:�";"�H8�%;!):��;'�:��{fe
-QJp��(';(l;'�:��{fe;& {%�H9�e뮥이 �ٸ 확대. AI 팩토리 내 장비 정밀 부품㬖 수요 연동 증가 전망.</td>
+  <!-- 천안·아산 -->
+  <div class="region-card" style="border-left:4px solid #854F0B;">
+    <div class="region-title" style="color:#854F0B;">📍 천안·아산 권역</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 삼성SDI·삼성디스플레이 천안공장, 현대트랜시스 아산공장, 천안 3·4산업단지 중소 부품사</div>
+    <div class="region-temp">수요 온도: ✅ 보통</div>
+    <div class="region-row">🔸 <strong>핵심이슈①</strong> — 지방선거 공약에 천안·아산 첨단산업단지 조성·AI반도체·바이오센터 설치 포함, 중기 투자 기대감 (이코노미톡 2026.06.04)</div>
+    <div class="region-row">🔸 <strong>핵심이슈②</strong> — 현대트랜시스 모빌리티 부품(변속기·드라이브트레인) 생산 지속, 고정밀 볼스크류·베어링 수요 안정적 유지</div>
+    <div class="region-rec" style="color:#854F0B;">🏢 방문 추천 업체 유형: 삼성SDI·디스플레이 협력 설비업체, 현대트랜시스 2차 협력사 (볼스크류·정밀 베어링 정기 납품 관계 강화)</div>
+  </div>
+
+  <div class="action-box">
+    <span class="action-label">💼 오늘의 영업 액션: </span>
+    수도권 반도체 장비사 방문 우선 순위 설정, SK하이닉스 협력사 리스트 재정비 후 LM가이드·볼스크류 재고 현황 공유
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링①</span> SK하이닉스 이천/청주 증설 착공 공시 및 설비 발주 RFQ 동향</div>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링②</span> 대구·경북 제조업 BSI 7월 발표 — 50 이하 하락 시 수요 감소 신호</div>
+  </div>
+</div>
+
+<!-- ===== 3. 수요산업 ===== -->
+<div class="section">
+  <div class="section-header hdr-demand">🏭 수요산업</div>
+  <div class="section-headline">반도체 AI 투자 주도, 자동차·이차전지 혼조세<span class="badge badge-neu">중립</span></div>
+  <div class="overview ov-demand">반도체 AI 설비투자가 수요를 주도하며 정밀부품 발주 상승 기대. 자동차부품은 생산 증가에도 고환율 원가 부담으로 혼조세, 방산 수요는 SNT다이내믹스 등 공작기계·자동화 수요 실질 증가세.</div>
+
+  <table class="kp-table">
+    <thead>
+      <tr>
+        <th class="hdr-demand" style="width:24%">소제목</th>
+        <th class="hdr-demand" style="width:12%">감성</th>
+        <th class="hdr-demand">내용</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>반도체 AI 투자 확대</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>SK하이닉스-엔비디아 AI 팩토리 동맹, 삼성 P5 NAND 할당 예정으로 반도체 장비·클린룸 정밀부품 신규 발주 사이클 진입. 반도체 소부장 중심축 이동(뷰어스 2026.06.08).</td>
+      </tr>
+      <tr>
+        <td><strong>자동차부품 혼조세</strong></td>
+        <td><span class="badge badge-neu">중립</span></td>
+        <td>대구 자동차 생산 +8.2%(1Q), 금속가공 +18.5% 긍정 vs 고환율 원가 압박·내수 부진으로 투자 여력 축소. LG그룹 EV 액추에이터·모터 모듈 전환 가속.</td>
+      </tr>
+      <tr>
+        <td><strong>방산 수요 부상</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>SNT다이내믹스 방산 성장 날개 달고 공작기계·자동화 설비 발주 증가. 경북 방산 클러스터 연관 수요 기대. 삼익THK 방산 수혜주 직접 언급.</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="analysis-box analysis-robot">
-    <strong>① 협동로봇 확산의 직접 수혜</strong>
-    <p>협동로봇 1대 평균 LM가이드 6~12개 탑재. 글로벌 협동로봇 출하량 연 20% 이상 성장세에서 LM가이드·볼스크류 수요 직결. 국내 로봇 시스템 인테그레이터(SI) 공략 필요.</p>
+  <div class="analysis-box ab-demand">
+    <div class="analysis-title" style="color:#185FA5;">▶ 반도체 소부장 사이클 전환: 가격→설비투자 확대</div>
+    <div class="analysis-body">뷰어스 산업보고서(2026.06.08)에 따르면 메모리 반도체 업황이 가격 상승 사이클에서 설비투자 확대 사이클로 전환 중이다. 삼성전자 P5 NAND 라인, SK하이닉스 HBM 생산라인 증설이 맞물려 클린룸 이송·정렬·진동 절연에 쓰이는 고정밀 베어링·LM가이드의 선행 발주가 2026년 4분기~2027년 집중될 가능성이 높다.</div>
   </div>
-  <div class="analysis-box analysis-robot">
-    <strong>② 국내 물류센터 자동화 수요</strong>
-    <p>이커머스 성장세에 국내 물류센터 신설·리뉴얼 가속. 이송 설비 내 LM가이드·볼스크류 교체 주기 도래 업체 발굴이 신규 수요처 확보 관건.</p>
+  <div class="analysis-box ab-demand">
+    <div class="analysis-title" style="color:#185FA5;">▶ 전기차·모빌리티 혁명과 베어링 수요 구조 변화</div>
+    <div class="analysis-body">LG그룹 모빌리티 혁명 기사(뉴스투데이 2026.06.07)처럼 자동차부품사가 액추에이터·모터 모듈 중심으로 전환 중이다. 전통 내연기관용 베어링 수요는 정체되나, EV 모터 샤프트·서스펜션 정밀 베어링과 자율주행 카메라·라이다 구동부 LM가이드 수요가 증가하고 있어 제품 포트폴리오 재편이 필요하다.</div>
   </div>
 
   <div class="action-box">
-    <div class="label">🎯 오늘의 영업 액션</div>
-    국내 물류센터 자동화 설비업체 및 협동로봇 SI 업체 DB 정리, 신규 영업 가능처 발굴. 로봇용 LM가이드 규격별 재고 현황 확인.
+    <span class="action-label">💼 오늘의 영업 액션: </span>
+    반도체 장비 협력사 대상 클린룸용 NSK·THK 정밀 베어링·LM가이드 재고 현황 공유 및 선구매 견적 제시
   </div>
   <div class="monitor-box">
-    <div class="label">👁️ 이번 주 모니터링</div>
-    <ul>
-      <li>삼익THK 주가·수주 동향 (국산 LM가이드 시장 지표)</li>
-      <li>국내 협동로봇 월별 출하량 및 주요 SI 업체 신규 프로젝트 동향</li>
-    </ul>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링①</span> 삼성전자 P5 NAND 라인 착공 공식 발표 및 설비 발주 시점</div>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링②</span> SNT다이내믹스 방산 공작기계 수주 규모 및 공급망 구성 발표</div>
+  </div>
+</div>
+
+<!-- ===== 4. 로봇·자동화 ===== -->
+<div class="section">
+  <div class="section-header hdr-robot">🤖 로봇·자동화</div>
+  <div class="section-headline">AI 팩토리·물류 로봇 투자 확대, LM가이드 수요 견인<span class="badge badge-pos">긍정</span></div>
+  <div class="overview ov-robot">SK하이닉스 제조 자동화 확장, 아마존 유럽 물류 로봇 100억유로 투자 발표로 글로벌 로봇·자동화 설비 수요 급증. 삼익THK가 국내 로봇 수혜주로 직접 언급되며 LM가이드·볼스크류 수요 구조적 증가 국면 진입.</div>
+
+  <table class="kp-table">
+    <thead>
+      <tr>
+        <th class="hdr-robot" style="width:24%">소제목</th>
+        <th class="hdr-robot" style="width:12%">감성</th>
+        <th class="hdr-robot">내용</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>SK하이닉스 제조 자동화</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>엔비디아 협력으로 EDA·시뮬레이션 자동화 확대, 반도체 FAB 이송 시스템 정밀 LM가이드·볼스크류 신규 발주 기대 (뉴스클레임·이뉴스투데이 2026.06.08).</td>
+      </tr>
+      <tr>
+        <td><strong>아마존 물류 로봇 투자</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>유럽 100억유로 물류 자동화 투자 발표(아이로봇뉴스 2026.06.07). 국내 쿠팡·CJ 유사 투자 파급 효과, 물류 로봇용 LM가이드·볼스크류 수요 상승.</td>
+      </tr>
+      <tr>
+        <td><strong>삼익THK 로봇 수혜</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>방산+로봇 성장 동반 수혜주로 직접 언급(핀포인트뉴스 2026.06.07). 직선운동·자동화 부품 국내 대표로 수주 증가 기대. 점유율 확대 기회.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-box ab-robot">
+    <div class="analysis-title" style="color:#7B3FA5;">▶ 협동로봇 소형화 트렌드와 소형 LM가이드 수요</div>
+    <div class="analysis-body">협동로봇(Cobot) 보급 확대로 탑재 LM가이드의 소형화·경량화 추세가 가속되고 있다. HIWIN·SBC의 소형(HGW15 이하) LM가이드 수요가 증가하는 반면, 대형·중형 규격은 반도체·방산 설비 중심으로 유지된다. 협동로봇 1대 평균 LM가이드 6~12개 탑재, 글로벌 협동로봇 출하량 연 20% 성장에서 LM가이드 수요가 직결된다.</div>
+  </div>
+  <div class="analysis-box ab-robot">
+    <div class="analysis-title" style="color:#7B3FA5;">▶ AI 팩토리 이송 시스템에서의 고정밀 볼스크류 역할</div>
+    <div class="analysis-body">AI 팩토리 핵심은 웨이퍼 이송·검사장비의 반복 정밀도(±1μm 이하)다. 이 영역에서 C3급 이상 볼스크류(THK, NSK-BS, HIWIN 정밀 등급)가 필수 적용된다. 삼성·SK 클린룸 설비 증설 시 해당 등급 볼스크류 신규 발주가 연간 수십억원 규모로 발생할 수 있어 재고 및 납기 대응력이 수주의 핵심 변수다.</div>
+  </div>
+
+  <div class="action-box">
+    <span class="action-label">💼 오늘의 영업 액션: </span>
+    로봇 인티그레이터 업체 방문하여 삼익THK·HIWIN LM가이드 세트 견적 제공, 협동로봇 소형 규격 재고 현황 안내
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링①</span> 삼익THK 2분기 수주 발표 및 로봇 부문 매출 비중 공시 (7월 예정)</div>
+    <div class="monitor-item"><span class="monitor-label">👁 모니터링②</span> 국내 협동로봇 제조사(레인보우로보틱스·두산로보틱스) 상반기 생산 계획 및 부품 조달 동향</div>
   </div>
 </div>
 
 <!-- ===== 5. 메이커 동향 ===== -->
 <div class="section">
   <div class="section-header hdr-maker">⚙️ 메이커 동향 · 경쟁사·시장 점유율</div>
-  <div class="section-headline">국산 대체 가속 · 일제 고환율 부담으로 경쟁구도 변화<span class="badge badge-neu">중립</span></div>
-  <div class="overview">원달러 1,550원대 고환율로 일본·유럽계 수입 베어링 원가 압박. 삼익THK·SBC 국산 제품 상대적 경쟁력 강화, HIWIN 대만산 가격 경쟁력 유지.</div>
+  <div class="section-headline">삼익THK 로봇 수혜 주목, 국산 고환율 반사이익 가능<span class="badge badge-neu">중립</span></div>
+  <div class="overview ov-maker">고환율(원/달러 1,550원대)로 수입 메이커(NSK·SKF·THK·HIWIN) 가격 인상 불가피한 반면, 삼익THK·SBC 등 국산 메이커는 상대적 가격경쟁력이 개선될 전망. 삼익THK는 로봇·방산 수혜주로 부각되며 시장점유율 확대 기대.</div>
 
   <table class="kp-table">
     <thead>
-      <tr><th style="width:28%">소제목</th><th style="width:12%">감성</th><th>내용</th></tr>
+      <tr>
+        <th class="hdr-maker" style="width:24%">소제목</th>
+        <th class="hdr-maker" style="width:12%">감성</th>
+        <th class="hdr-maker">내용</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>수입 베어링 원가 상승</strong></td>
-        <td><span class="badge badge-neg">부정</span></td>
-        <td>NSK·NTN·FAG 수입 원가 10~15% 상승으로 납품가 인상 압박. 고객사 가격 협의 장기화 및 구매 지연 위험.</td>
-      </tr>
-      <tr>
-        <td><strong>삼익THK 국산 브랜드 부상</strong></td>
+        <td><strong>삼익THK 로봇 수혜</strong></td>
         <td><span class="badge badge-pos">긍정</span></td>
-        <td>방산·로봇 수혜주로 부각, LM가이드 국내 점유율 방어. 고환율 구간 국산 대체 수요 증가 수혜.</td>
+        <td>방산+로봇 성장 동반 수혜로 직선운동 LM가이드·볼스크류 국내 1위 지위 강화, 수주 증가 전망. (핀포인트뉴스 2026.06.07 직접 언급)</td>
       </tr>
       <tr>
-        <td><strong>HIWIN 대만산 경쟁력 유지</strong></td>
-        <td><span class="badge badge-neu">중립</span></td>
-        <td>대만 달러 영향 제한적으로 원가 경쟁력 상대적 유지. 일제 대비 가격 메리트 부각 가능성.</td>
+        <td><strong>수입 메이커 가격 인상</strong></td>
+        <td><span class="badge badge-neg">부정</span></td>
+        <td>NSK·SKF·NTN·THK 등 1,550원대 환율 반영 단가 조정 예고. 고객사 원가 부담 상승, 납기 혼란 우려. 사업플러스 보도(2026.06.08) "투자보다 생존".</td>
+      </tr>
+      <tr>
+        <td><strong>국산 대체 경쟁력 강화</strong></td>
+        <td><span class="badge badge-pos">긍정</span></td>
+        <td>HIWIN 가격 10~15% 상승 시 SBC·삼익THK LM가이드 가격경쟁력 개선. 일반 산업용 국산 대체 수요 증가 예상. 하반기 시장 재편 기회.</td>
       </tr>
     </tbody>
   </table>
 
+  <p style="font-size:12.5px; font-weight:700; color:#0F6E56; margin:14px 0 6px;">📋 주요 메이커 점유율 비교표</p>
   <table class="maker-table">
     <thead>
-      <tr><th>메이커</th><th>주력 품목</th><th>글로벌/국내 점유율</th><th>국내 유통 동향</th></tr>
+      <tr>
+        <th style="width:16%">메이커</th>
+        <th style="width:22%">주력 품목</th>
+        <th style="width:27%">글로벌/국내 점유율</th>
+        <th>국내 유통 동향</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>NSK (일본)</strong></td>
-        <td>볼베어링, LM가이드</td>
-        <td>글로벌 약 12% / 국내 약 25%</td>
-        <td>고환율 원가 부담, 납품가 인상 협의 중</td>
-      </tr>
-      <tr>
-        <td><strong>NTN (일본)</strong></td>
-        <td>볼베어링, 원추롤러베어링</td>
-        <td>글로벌 약 8% / 국내 약 15%</td>
-        <td>일부 품목 납기 지연, 재고 확인 필요</td>
+        <td>볼베어링·LM가이드</td>
+        <td>글로벌 약 8%, 국내 약 20%</td>
+        <td>고환율 반영 가격 인상 검토 중. 납기 4~6주 안정</td>
       </tr>
       <tr>
         <td><strong>SKF (스웨덴)</strong></td>
         <td>범용 베어링 전체</td>
-        <td>글로벌 약 20% / 국내 약 10%</td>
-        <td>가격 동결 유지 중, 하반기 조정 예상</td>
-      </tr>
-      <tr>
-        <td><strong>삼익THK (국산)</strong></td>
-        <td>LM가이드, 볼스크류</td>
-        <td>국내 LM가이드 약 30%+</td>
-        <td>로봇·방산 수혜, 점유율 확대 기회</td>
-      </tr>
-      <tr>
-        <td><strong>SBC (국산)</strong></td>
-        <td>LM가이드, 리니어부시</td>
-        <td>국내 약 15%</td>
-        <td>가격 경쟁력 유지, 중소업체 공략 유효</td>
-      </tr>
-      <tr>
-        <td><strong>HIWIN (대만)</strong></td>
-        <td>LM가이드, 볼스크류</td>
-        <td>글로벌 약 15% / 국내 약 20%</td>
-        <td>원가 경쟁력 상대적 유지, 일제 대체 수혜</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="analysis-box analysis-maker">
-    <strong>① 고환율 장기화 시 시장 재편</strong>
-    <p>원달러 1,550원 이상 유지 시 NSK·NTN 일부 수요가 삼익THK·SBC·볼스크류 납품 로 대응 기회 선점 필요.</p>
-  </div>
-  <div class="analysis-box analysis-maker">
-    <strong>② SKF·FAG 유럽계 가격 전략</strong>
-    <p>유로/원 환율 영향으로 유럽계 메이커 현재 가격 동결 유지. 하반기 가격 인상 가능성 예고로 선주문 유도 영업 전략 유효.</p>
-  </div>
-
-  <div class="action-box">
-    <div class="label">🎯 오늘의 영업 액션</div>
-    NSK·NTN 수입 베어링 사용 고객사 방문 시 고환율 원�  상승 안내 후 국산(삼익THK·SBC) 또는 HIWIN 대안 제시. 재고 품목 목록 지참.
-  </div>
-  <div class="monitor-box">
-    <div class="label">👁️ 이번 주 모니터링</div>
-    <ul>
-      <li>NSK·NTN 공식 가격 인상 공문 발송 여부 확인</li>
-      <li>삼익THK 신규 수주 발표 및 생산 능력 확대 동향</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ===== 참고 기사 ===== -->
-<div class="refs">
-  <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#333;">📎 참고 기사 목록</h3>
-
-  <div class="ref-cat">반도체·설비투자</div>
-  <a href="https://www.cstimes.com/news/articleView.html?idxno=708738" target="_blank">그로쓰리서치 "메모리 반도체 중심축 이동…소부장 중요성↑" (2026-06-08)</a>
-  <a href="https://www.epnc.co.kr/news/articleView.html?idxno=402701" target="_blank">[TECH앜주] 젠슨 황이 원하는 HBM, 단단한 결속 에스티… (2026-06-08)</a>
-  <a href="https://www.newsclaim.co.kr/news/articleView.html?idxno=3065723" target="_blank">SK하이닉스-규디아 AI 팩토리용 메모리 발전 기술 동맹 (2026-06-08)</a>
-  <a href="http://www.4th.kr/news/articleView.html?idxno=2112829" target="_blank">SK하이닉스, 규디아와 베라 루빈·젯슨 토르까지 공동개발 (2026-06-08)</a>
-
-  <div class="ref-cat">자동차·제조업</div>
-  <a href="https://www.news2day.co.kr/article/20260607500040" target="_blank">[전기차 전환을 넘어 모빌리티 혁명으로] LG그룹, 근육에서 두뇌까지 (2026-06-08)</a>
-  <a href="https://www.news1.kr/local/daegu-gyeongbuk/6182948" target="_blank">경북연구원 "GDP 반등에도 구조 성장 한계…경북 산업전략 고도화해야" (2026-06-07)</a>
-
-  <div class="ref-cat">로봇·자동화</div>
-  <a href="https://www.irobotnews.com/news/articleView.html?idxno=46724" target="_blank">아마존, 차세대 물류 로봇 '프로테우스' 공개…유럽 100억유로 투자 (2026-06-07)</a>
-  <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=458083" target="_blank">방산 날개 단 SNT다이내믹스…삼익THK 로봇 수혜 기대 (2026-06-07)</a>
-
-  <div class="ref-cat">대구·경북 동향</div>
-  <a href="https://www.idaegu.com/news/articleView.html?idxno=663414" target="_blank">"외형은 회복, 내실은 자금 압박"…대구 기업 체감경기 '냉랭' (2026-06-07)</a>
-  <a href="https://www.idaegu.com/news/articleView.html?idxno=663257" target="_blank">대구 소비 살아났나 했더니…주유소 매출이 끌어올렸다 (2026-06-03)</a>
-  <a href="https://www.idaegu.com/news/articleView.html?idxno=663181" target="_blank">반도체 훈풍에도…TK 제조업 체감경기 '제자리' (2026-06-02)</a>
-
-  <div class="ref-cat">천안·아산</div>
-  <a href="http://www.economytalk.kr/news/articleView.html?idxno=421739" target="_blank">[지방선거, 정책 수혜] 충남 천안·아산 디스플레이 산업벨트 핵심 (2026-06-04)</a>
-
-  <div class="ref-cat">환율·원� </div>
-  <a href="https://n.news.naver.com/mnews/article/028/0002808505?sid=101" target="_blank">금융위기 수준까지 간 고환율…장기화 땐 산업 전반 '비용 부담' (2026-06-07)</a>
-  <a href="https://n.news.naver.com/mnews/article/009/0005690397?sid=101" target="_blank">"건축자재 원자재값 63% 급등"‥초고환율에 K중기 비명 (2026-06-07)</a>
-  <a href="https://n.news.naver.com/mnews/article/088/0001013391?sid=101" target="_blank">"팔수록 손해" 수익성 악화 넘어 투자 여력↓…대구 산업계 경쟁력 압박 (2026-06-05)</a>
-</div>
-
-<div class="footer">태광베어링 업황 브리핑 2�FC��7�6�73�&&FvR&FvR��2#��	S��7����FC��FC�
-��++~�λHrȉ�ى��;κ��h���ޫ��N�9��Z޸+B�	���ʂ�
-��kB��:ٙ��ʂ�ZΫB�Z��+���+Bȉ�ɩB�iޫȉ�ى����FC���G#��G#��FC��7G&��s䄕t�����x��+�+����
-R���x��7G&��s���FC��FC��7�6�73�&&FvR&FvR��WR#��I�k���7����FC��FC���x���ι��Ɉ�jR�	��Y����κ�ɹ��+����
-R�8������x�����	�����B��*���N�j�ث��h����^�K���FC���G#���F&�G����F&�Sࠢ�F&�R6�73�&��W"�F&�R#��F�VC��G#��F�N��N˺C��F���F���;κ
-R�(������F���F��λ(���Z޸+B�	���ʃ��F���F��Z޸+B���kR����jS��F����G#���F�VC��F&�G���G#��FC��7G&��s��4����λ;����7G&��s���FC��FC�;λ*�kN�x��ޫ��N�9���FC��FC�λ(��[�"R��Z޸+B�[�#RS��FC��FC�:ٙ��ʂɹ��h��B��*��(���ێ�8ى�ق�I��FC���G#��G#��FC��7G&��s��D����λ;����7G&��s���FC��FC�;λ*�kN�x�ɹ�iN�N��λ*�kN�x��FC��FC�λ(��[��R��Z޸+B�[�RS��FC��FC���λh�(�����*����x�{���Ϋ:ٙ^�ۂ�XNɩC��FC���G#��G#��FC��7G&��s�4�b�ȪNɺ���B���7G&��s���FC��FC�)Nɪ��*�kN�x�N�+C��FC��FC�λ(��[�#R��Z޸+B�[�S��FC��FC��*�����+���x�I��Y��	�����	RɈ��8��FC���G#��G#��FC��7G&��s��+���UD����Z��+���7G&��s���FC��FC��ޫ��N�9���;�ȪN�κY���FC��FC�Z޸+B�ޫ��N�9��[�3R���FC��FC�λH|+~�
-��+ȉ�ى���	���ʂٙ^����٨���FC���G#��G#��FC��7G&��s�4$2��Z��+���7G&��s���FC��FC��ޫ��N�9���jθ���kN�hȹ���FC��FC�Z޸+B�[�RS��FC��FC��*��+����
-R���x��I�h��x^�+B�;^��R��٪���FC���G#��G#��FC��7G&��s䄕t������x��7G&��s���FC��FC��ޫ��N�9���;�ȪN�κY���FC��FC�λ(��[�RR��Z޸+B�[�#S��FC��FC�ɹ��+����
-R�8������x�����	����+Bȉ�ى���FC���G#���F&�G����F&�Sࠢ�F�b6�73�&�Ǘ6�2�&���Ǘ6�2���W"#��7G&��s�)�:ٙ��ʂ��^��ٙBȹ�ȹ���R�������7G&��s���ɹ��ι���SSɹ��N�8���xȹ��4�+t�D���λhȉ�ɩN� �+���UD��+u4$<+~�;�ȪN�κY��*��(���������٨��J�	�XNɩB������F�c��F�b6�73�&�Ǘ6�2�&���Ǘ6�2���W"#��7G&��s�)4�l+tdr����ޫ8B��*��N��S��7G&��s��������ɹٙ��ʂɈ�j^��κ�����ޫ8B��N��N˺BوN�����*�����+���x��Y��	�����*��ێ�8���^�KɈ��:���J�;κ˂����BɈ�xR�N��R��٪�������F�cࠢ�F�b6�73�&7F����&��#��F�b6�73�&�&V�#�	���ɊN����قɈ�xR�Z�Y���F�c��4�+t�D�ȉ���R�*�kN�x�*�ɪ��:�	��*��
-��˂ȹ��:ٙ��ʂɹ� �8ȫ��X��+BٸB�Z��+��+���UD��+u4$2�����B��t�����X��	�ȹ����Ϋ:�(����������x�����F�c��F�b6�73�&���F�"�&��#��F�b6�73�&�&V�#�	������N�(��;��������K�x��F�c��V���Ɠ��4�+t�D��;^ȹ���*��ێ�8�;^�˂�	��j�zλhٙ^�ۃ��Ɠ��Ɠ��+���UD��Ⱥ�y�ȉ��;��	������9��+��^�
-Rٙ^������jS��Ɠ���V����F�c���F�cࠣ�����������:���*����������F�b6�73�'&Vg2#�ƃ27G��S�&f��B�6��S�G��f��B�vV�v�C�s��&v���&�GF�ӣ'��6���#�3333�#�	�8����:���*���������3ࠢ�F�b6�73�'&Vb�6B#�	���N�+L+~�JN��N؊�����F�c���&Vc�&�GG3���wwr�77F��W2�6����Ww2�'F�6�Uf�Wr�F����G����s�s3�"F&vWC�%�&��#�{����;�j��I�˙�.��N����j��	���N�+B�IȺ��iR��N���(
-n�hλh��R�IɩN�K(i"�##b�b��������&Vc�&�GG3���wwr�W�2�6��"��Ww2�'F�6�Uf�Wr�F����G����C#s"F&vWC�%�&��#�DT4��Y��;���
-Ȫ�ٚ���Bɹ�Y���B�$���������Y��+�h��yȪNػ(
-b�##b�b��������&Vc�&�GG3���wwr��Ww66����6��"��Ww2�'F�6�Uf�Wr�F����G����3cSs#2"F&vWC�%�&��#�4��Y���N���ȪBޫyιIN�XB��ʞ�j�j�ɪ���N����j��	��B��Ȋ����{��##b�b��������&Vc�&�GG���wwr�GF��"��Ww2�'F�6�Uf�Wr�F����G����##�#�"F&vWC�%�&��#�4��Y���N���ȪB��yιIN�XNɘ�*����:����+~�
-�Ȫ��j�[N����x�;^����	λ	��##b�b�����ࠢ�F�b6�73�'&Vb�6B#�������
-�+~�	���xS��F�c���&Vc�&�GG3���wwr��Ww3&F��6��"�'F�6�R�##ccsSC"F&vWC�%�&��#��N���
-��Nٙ���B�I��kB�����κj�ػو��^��κ���~�{��;���{����y�I���xΫ���x�##b�b��������&Vc�&�GG3���wwr��Ww3�"���6��FVwR�w�V��v'V��c�#�C�"F&vWC�%�&��#�+޻h�{�Z�ɹ$tE�	��;�y��B�Z���K��R�YΫ8N(
-n�+޻h�+�x^�N��R�:��NٙN�[N�[�"�##b�b�r���ࠢ�F�b6�73�'&Vb�6B#�λH|+~�����ٙC��F�c���&Vc�&�GG3���wwr�&�&�F�Ww2�6����Ww2�'F�6�Uf�Wr�F����G����Ccs#B"F&vWC�%�&��#��XN�x��B��
-��K�����κY��λHr~�HN���X�ɫȪBr�;^�	�(
-n������k^����؊����##b�b�r������&Vc�&�GG3���wwr������F�Ww2�6��"��Ww2�'F�6�Uf�Wr�F����G����CS��2"F&vWC�%�&��#�
-��+�*�	����4�N��N��N�+N���ȪN(
-n�+���UD���λHrȉ�ى������##b�b�r���ࠢ�F�b6�73�'&Vb�6B#���Z�+~�+޻h����jS��F�c���&Vc�&�GG3���wwr�FVwR�6����Ww2�'F�6�Uf�Wr�F����G����cc3CB"F&vWC�%�&��#�.ɛ�ى^��٨λ;R��+NȺN��������Y^�	R.(
-n���Z����xR�+N�	�+ޫ�~�8����r�##b�b�r������&Vc�&�GG3���wwr�FVwR�6����Ww2�'F�6�Uf�Wr�F����G����cc3#Sr"F&vWC�%�&��#���Z��hλ�B�+N�XN�*θ)��h���N���(
-n�;����h��zN�i���B���kNɊκ���B�##b�b�2������&Vc�&�GG3���wwr�FVwR�6����Ww2�'F�6�Uf�Wr�F����G����cc3�"F&vWC�%�&��#�	���N�+Bٸ��(��y��N(
-eD��	���xR�+N�	�+ޫ�~�	����j�r�##b�b�"���ࠢ�F�b6�73�'&Vb�6B#��)��X�+~�XN�+��F�c���&Vc�&�GG���wwr�V6���חFƲ�"��Ww2�'F�6�Uf�Wr�F����G����C#s3�"F&vWC�%�&��#��x�
-��J���	^�Rȉ�ى���j��*��)��X�+~�XN�+�INȪN�Hκ���B�+�x^�*�ث��[^Ⱥ��##b�b�B���ࠢ�F�b6�73�'&Vb�6B#�ٙ��ʌ+~ɹ� ��F�c���&Vc�&�GG3������Ww2��fW"�6�����Ww2�'F�6�R�#��#��SS�6�C�"F&vWC�%�&��#���^��N��ȉ��H����x�B�:ٙ��ʎ(
-n��^��ٙB�Y�+�xR�N�	�~��Nɪ��h��Br�##b�b�r������&Vc�&�GG3������Ww2��fW"�6�����Ww2�'F�6�R���Sc�3�s�6�C�"F&vWC�%�&��#�.�N�i^�����ɹ����Ϋ	"c2R����;.(
-^�H��:ٙ��ʎ�y��I����N��R�##b�b�r������&Vc�&�GG3������Ww2��fW"�6�����Ww2�'F�6�R����33��6�C�"F&vWC�%�&��#�.��Nȉ����i�[B"ȉ���^�K�X^ٙB�I��kB؊����zκ
-^(i>(
-n���Z��+�x^�8B�+����
-R�Y^�	R�##b�b�R������F�cࠣ�F�b6�73�&f��FW"#��9ΫI�*�kN�x�x^ٚ���κj��Y
+        <td>글로벌 약 10%, 국내 약 12%</td>
+        <td>유로화 약세로 인상폭 완화. 재고 안정 유지</td>
+      </tr
