@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태광베어링 업황 브리핑 2026-06-10</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Malgun Gothic', sans-serif; background: #f0f0f0; color: #222; font-size: 13px; line-height: 1.6; }
+  .page-wrap { max-width: 820px; margin: 0 auto; background: #fff; box-shadow: 0 2px 16px rgba(0,0,0,0.13); }
+
+  /* 표지 */
+  .cover { padding: 52px 48px 40px; page-break-after: always; border-bottom: 3px solid #BA7517; }
+  .cover-company { font-size: 13px; color: #666; letter-spacing: 2px; margin-bottom: 8px; }
+  .cover-title { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+  .cover-date { font-size: 15px; color: #555; margin-bottom: 28px; }
+  .cover-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .chip { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .chip-pos { background: #EAF3DE; color: #3B6D11; }
+  .chip-neu { background: #FAEEDA; color: #854F0B; }
+  .chip-neg { background: #FAECE7; color: #993C1D; }
+  .cover-exchange { font-size: 13px; color: #444; background: #f7f7f7; padding: 10px 16px; border-radius: 6px; border-left: 4px solid #BA7517; }
+  .btn-print { display: inline-block; margin-top: 20px; padding: 9px 22px; background: #BA7517; color: #fff; border: none; border-radius: 5px; font-size: 13px; font-family: 'Malgun Gothic', sans-serif; cursor: pointer; font-weight: 600; }
+  .btn-print:hover { background: #9a6010; }
+
+  /* 섹션 공통 */
+  .section { padding: 38px 48px 32px; page-break-before: always; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .section-cat { font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 3px 10px; border-radius: 12px; color: #fff; }
+  .cat-market { background: #BA7517; }
+  .cat-region { background: #2E7D32; }
+  .cat-demand { background: #185FA5; }
+  .cat-robot { background: #7B3FA5; }
+  .cat-maker { background: #0F6E56; }
+  .section-headline { font-size: 19px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; margin-bottom: 12px; }
+  .badge-pos { background: #EAF3DE; color: #3B6D11; }
+  .badge-neu { background: #FAEEDA; color: #854F0B; }
+  .badge-neg { background: #FAECE7; color: #993C1D; }
+  .overview { font-size: 13px; color: #333; margin-bottom: 20px; background: #f9f9f9; padding: 12px 16px; border-radius: 5px; }
+
+  /* 핵심 포인트 테이블 */
+  .kp-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  .kp-table th { background: #f3f3f3; font-size: 11px; font-weight: 700; padding: 7px 10px; text-align: left; border: 1px solid #e0e0e0; }
+  .kp-table td { padding: 8px 10px; border: 1px solid #e0e0e0; font-size: 12px; vertical-align: top; }
+  .kp-table tr:nth-child(even) td { background: #fafafa; }
+
+  /* 심층분석 */
+  .analysis-box { border-left: 3px solid #BA7517; padding: 10px 14px; margin-bottom: 10px; background: #fafafa; border-radius: 0 4px 4px 0; }
+  .analysis-box.region { border-color: #2E7D32; }
+  .analysis-box.demand { border-color: #185FA5; }
+  .analysis-box.robot { border-color: #7B3FA5; }
+  .analysis-box.maker { border-color: #0F6E56; }
+  .analysis-title { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 4px; }
+  .analysis-body { font-size: 12px; color: #444; }
+
+  /* 액션 & 모니터링 */
+  .action-box { background: #FFF8EE; border: 1px solid #F5C77E; border-radius: 5px; padding: 10px 14px; margin-top: 16px; margin-bottom: 10px; }
+  .action-label { font-size: 11px; font-weight: 700; color: #BA7517; margin-bottom: 4px; }
+  .action-body { font-size: 12px; color: #333; }
+  .monitor-box { background: #F0F5FF; border: 1px solid #ADC6F5; border-radius: 5px; padding: 10px 14px; }
+  .monitor-label { font-size: 11px; font-weight: 700; color: #185FA5; margin-bottom: 4px; }
+  .monitor-item { font-size: 12px; color: #333; margin-bottom: 2px; }
+
+  /* 지역 카드 */
+  .region-card { border: 1px solid #e0e0e0; border-radius: 7px; padding: 14px 16px; margin-bottom: 14px; }
+  .region-title { font-size: 13px; font-weight: 700; color: #2E7D32; margin-bottom: 6px; }
+  .region-row { font-size: 12px; color: #444; margin-bottom: 4px; }
+  .region-row strong { color: #222; }
+  .temp-hot { color: #C62828; font-weight: 700; }
+  .temp-ok { color: #2E7D32; font-weight: 700; }
+  .temp-cold { color: #1565C0; font-weight: 700; }
+
+  /* 메이커 점유율 테이블 */
+  .delivery-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .delivery-table th { background: #0F6E56; color: #fff; font-size: 11px; padding: 7px 10px; text-align: left; border: 1px solid #ccc; }
+  .delivery-table td { padding: 7px 10px; border: 1px solid #e0e0e0; font-size: 12px; }
+  .delivery-table tr:nth-child(even) td { background: #f4faf8; }
+
+  /* 참고기사 */
+  .refs { margin-top: 24px; padding-top: 16px; border-top: 1px solid #eee; }
+  .ref-cat { font-size: 11px; font-weight: 700; color: #888; margin-bottom: 6px; margin-top: 10px; letter-spacing: 1px; }
+  .refs a { display: block; font-size: 11px; color: #185FA5; text-decoration: none; margin-bottom: 3px; padding: 2px 0; }
+  .refs a:hover { text-decoration: underline; }
+
+  /* 푸터 */
+  .footer { text-align: center; padding: 18px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; background: #f9f9f9; }
+
+  /* 인쇄 */
+  @page { size: A4; margin: 18mm 15mm; }
+  @media print {
+    .btn-print { display: none; }
+    .analysis-box, .action-box, .monitor-box, .region-card,
+    .kp-table, .delivery-table { break-inside: avoid; page-break-inside: avoid; }
+    .kp-table tr, .kp-table thead { break-inside: avoid; page-break-inside: avoid; }
+    .section-header { break-after: avoid; page-break-after: avoid; }
+    .section-headline { break-after: avoid; page-break-after: avoid; }
+    .overview { break-after: avoid; page-break-after: avoid; }
+    .ref-cat { break-after: avoid; page-break-after: avoid; }
+    .refs a { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- ===== 표지 ===== -->
+<div class="cover">
+  <div class="cover-company">태광베어링 (주)</div>
+  <div class="cover-title">📋 업황 브리핑</div>
+  <div class="cover-date">2026년 6월 10일 (수) · 자동 생성</div>
+
+  <div class="cover-chips">
+    <span class="chip chip-neu">📊 시장 시황 · 중립</span>
+    <span class="chip chip-neu">🗺️ 지역 온도계 · 중립</span>
+    <span class="chip chip-pos">🏭 수요 산업 · 긍정</span>
+    <span class="chip chip-pos">🤖 로봇·자동화 · 긍정</span>
+    <span class="chip chip-neu">⚙️ 메이커 동향 · 중립</span>
+  </div>
+
+  <div class="cover-exchange">
+    💹 <strong>원/달러 1,500원대 고환율 지속</strong> — 수입 베어링·LM가이드 원가 상승 압박 지속, 공급 단가 전가 협의 필요
+  </div>
+
+  <button class="btn-print" onclick="window.print()">🖨️ PDF 저장 / 인쇄</button>
+</div>
+
+<!-- ===== 1. 시장 시황 ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-cat cat-market">📊 시장 시황</span>
+  </div>
+  <div class="section-headline">고환율·관세 삼중고 속에도 반도체 수요가 유통 시장 지탱</div>
+  <span class="badge badge-neu">중립</span>
+  <div class="overview">
+    원/달러 환율 1,500원대 고착화와 수입 관세 압박으로 제조원가가 전방위 상승. 베어링·LM가이드·볼스크류 유통사는 수입 원가 인상분 전가 협의가 최대 과제이며, 반도체 설비투자 수요가 전체 시장의 하방 지지선 역할.
+  </div>
+
+  <table class="kp-table">
+    <thead>
+      <tr><th style="width:22%">소제목</th><th style="width:12%">감성</th><th>설명</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>고환율 원가 압박</strong></td>
+        <td><span class="badge badge-neg" style="margin:0">부정</span></td>
+        <td>원/달러 1,500원대로 수입 베어링·볼스크류 원가 15~20% 상승 추정. 수입 의존 품목 중심으로 공급가 재협의 불가피하며, 중소 수요처 구매 연기 움직임 포착.</td>
+      </tr>
+      <tr>
+        <td><strong>반도체 설비투자 호조</strong></td>
+        <td><span class="badge badge-pos" style="margin:0">긍정</span></td>
+        <td>삼성전자 2025년 설비투자+R&D 90조원(글로벌 1위), SK하이닉스 35조원(4위). 반도체 라인 증설로 정밀 LM가이드·볼스크류 수요는 하반기까지 안정적.</td>
+      </tr>
+      <tr>
+        <td><strong>자동차 부품 수요 위축</strong></td>
+        <td><span class="badge badge-neg" style="margin:0">부정</span></td>
+        <td>자동차 부품 수출 -8.0%(충남 기준). 완성차 생산 조정 영향으로 자동차 부품사향 범용 베어링 발주 감소. 단납기 소량 수요는 유지.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-box">
+    <div class="analysis-title">① 수입 단가 인상 협의 타이밍</div>
+    <div class="analysis-body">원/달러 1,500원대가 3개월 이상 지속되면서 일본·독일계 메이커 국내 대리점이 가격표(Price List) 개정 준비에 들어간 것으로 파악. 태광은 현재 재고 원가와 신규 입고 원가인쭬 역혤이를 근거로 6~7월 사이 단가 협의를 선제적으로 추진할 필요.</div>
+  </div>
+  <div class="analysis-box">
+    <div class="analysis-title">② 국산 대체재 수요 증가 기회</div>
+    <div class="analysis-body">고환율로 수입산 베어링 가격 부담이 높아지면서 삼익THK·SBC 등 국산 점유율수요 겅세. NSK·일본-̲1 등 국산 이반기계 대체 제안 영업 제 변 추적 베어링·LM가이드에 대한 수요처 문의가 증가 추세. 품질 임계치 이하 범용 품목에서 국산 대체 제안 영업을 병행하면 마진율 방어 가능.</div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-label">📌 오늘의 영업 액션</div>
+    <div class="action-body">고환율 영향 품목(수입 베어링·LM가이드) 재고 현황 파악 후 주요 거래처에 "단가 안정 공급 가능 재고 확보" 사전 안내 얰락 — 구매 결정 앞당기기.</div>
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-label">🔍 이번 주 모니터링</div>
+    <div class="monitor-item">① 원/달러 환율 1,500원 선 유지 여부 (외환당국 개입 동향)</div>
+    <div class="monitor-item">② 주요 메이커 대리점의 Price List 개정 공문 수신 여부</div>
+  </div>
+
+  <div class="refs">
+    <div class="ref-cat">📰 참고 기사</div>
+    <a href="https://www.daejonilbo.com/news/articleView.html?idxno=2280694" target="_blank">고환율에 관세 전쟁, 전기료 인상 압박까지…제조업계 삼중고 (대전일보, 2026-06-09)</a>
+    <a href="https://www.edaily.co.kr/news/newspath.asp?newsid=05264406645480080" target="_blank">"가격 올렸다가 거래처 잃을라"...중기, 원가 폭등에 '속수무책' (이데일리, 2026-06-09)</a>
+    <a href="https://www.edaily.co.kr/news/newspath.asp?newsid=05257846645480080" target="_blank">"원자잿값 1년새 700% 폭등"...중기, 고환율發 적자에 신음 (이데일리, 2026-06-09)</a>
+    <a href="https://www.tbc.co.kr/news/view?pno=20260609152559AE00847&id=207169" target="_blank">1,500원대 고환율...지역 기업 목 죈다 (TBC, 2026-06-09)</a>
+  </div>
+</div>
+
+<!-- ===== 2. 지역별 수요 온도계 ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-cat cat-region">🗺️ 지역별 수요 온도계</span>
+  </div>
+  <div class="section-headline">대구·경북 보통 / 수도권 뜨거움 / 천안·아산 보통</div>
+  <span class="badge badge-neu">중립</span>
+  <div class="overview">
+    권역별 수요 온도 차가 뚜렷. 반도체 투자 집중 수도권이 가장 뜨겁고, 대구·경북은 제조업 생산지표 개선에도 체감경기 무거움. 천안·아산은 삼성SDI·삼성디스플레이 안정 수요로 중립 유지.
+  </div>
+
+  <!-- 대구경북 -->
+  <div class="region-card">
+    <div class="region-title">🏙️ 대구·경북 권역</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 구미 삼성전자·LG이노텍, 대구 자동차부품·일반기계, 경북 방산·일반기계</div>
+    <div class="region-row"><strong>수요 온도:</strong> <span class="temp-ok">✅ 보통</span></div>
+    <div class="region-row"><strong>핵심 이슈 ①</strong> 4월 대구 제조업 생산 +3.6%, 경북 +1.5% 증가 — 지표상 회복세끘 BSI 72로 체감 경기는 냉각</div>
+    <div class="region-row"><strong>핵심 이슈 ②</strong> 성서산단 자동차부품사 발주 관망세 지속 — 완성차 생산 조정에 따른 베어링 수요 보수적</div>
+    <div class="region-row"><strong>이번 주 방문 추천:</strong> 구미 LG이노텍·삼성전자 협력사(디스플레이 설비 부품 납기 확인), 대구 기계 가공업체(LM가이드 수요 발굴)</div>
+  </div>
+
+  <!-- 수도권 -->
+  <div class="region-card">
+    <div class="region-title">🏙️ 수도권 권역 (경기·서울)</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 평택·화성 삼성전자 반도체·자동차, 이천 SK하이닉스, 안산·시화 중소 제조업</div>
+    <div class="region-row"><strong>수요 온도:</strong> <span class="temp-hot">🔥 뜨거움</span></div>
+    <div class="region-row"><strong>핵심 이슈 ①</strong> 삼성전자·SK하이닉스 반도체 CAPEX 125조원 집행 — 평택·이천 라인 증설로 정밀 LM가이드·볼스크류 수요 강세</div>
+    <div class="region-row"><strong>핵심 이슈 ②</strong> 반도체 장비업체(원익IPS·유진테크 등) 수주 확대로 2차 설비 부품 수요 연쇄 상승</div>
+    <div class="region-row"><strong>이번 주 방문 추천:</strong> 반도체 장비업체 협력 기계업체 (정밀 볼스크류·THK LM가이드 단납기 공급 제안)</div>
+  </div>
+
+  <!-- 천안아산 -->
+  <div class="region-card">
+    <div class="region-title">🏙️ 천안·아산 권역</div>
+    <div class="region-row"><strong>주요 수요처:</strong> 삼성SDI·삼성디스플레이, 현대트랜시스, 천안 3·4산업단지 중소업체</div>
+    <div class="region-row"><strong>수요 온도:</strong> <span class="temp-ok">✅ 보통</span></div>
+    <div class="region-row"><strong>핵심 이슈 ①</strong> 삼성SDI 이차전지 설비 유지보수 수요 안정 지속 — 베어링 소모품 교체 수요 꾸준</div>
+    <div class="region-row"><strong>핵심 이슈 ②</strong> 젠슨 황 방한 이후 충남 첨단제조업 클러스터 확장 기대감 — 중장기 신규 수요처 발굴 기회</div>
+    <div class="region-row"><strong>이번 주 방문 추천:</strong> 천안 3·4산단 자동화 설비업체 (LM가이드·볼스크류 교체 주기 도래 업체 집중 방문)</div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-label">📌 오늘의 영업 액션</div>
+    <div class="action-body">수도권 반도체 장비 협력업체 DB 리스트 업데이트 후 긴급 납기 대응 가능 품목(THK·NSK LM가이드 재고)을 사전 공지 — 긴급 수요 선점.</div>
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-label">🔍 이번 주 모니터링</div>
+    <div class="monitor-item">① 대구경북 BSI 6월 조사 결과 (7월 초 발표 예정 — 선행 파악)</div>
+    <div class="monitor-item">② 천안·아산 삼성SDI 2분기 생산 계획 변경 여부 확인</div>
+  </div>
+
+  <div class="refs">
+    <div class="ref-cat">📰 참고 기사</div>
+    <a href="https://www.idaegu.co.kr/news/articleView.html?idxno=550537" target="_blank">4월 대구·경북 제조업 생산 동반 증가 (아이대구, 2026-06-09)</a>
+    <a href="https://www.idaegu.com/news/articleView.html?idxno=663483" target="_blank">공장은 도는데 체감은 무겁다…대구경북 실물경제 회복의 그늘 (대구일보, 2026-06-09)</a>
+    <a href="https://www.idaegu.com/news/articleView.html?idxno=663489" target="_blank">대구 창업 생태계 지각변동…'생계형' 지고 'AI·소프트웨어' 뜬다 (대구일보, 2026-06-09)</a>
+    <a href="https://realty.chosun.com/site/data/html_dir/2026/06/09/2026060902530.html" target="_blank">방한 젠슨 황이 찍어준 부동산 유망 입지 (조선일보, 2026-06-09)</a>
+    <a href="https://www.newsfreezone.co.kr/news/articleView.html?idxno=693551" target="_blank">아산시의 미래 10년...공장에서 도시로, 도시에서 미래로 (뉴스프리존, 2026-06-08)</a>
+  </div>
+</div>
+
+<!-- ===== 3. 수요산업 ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-cat cat-demand">🏭 수요산업</span>
+  </div>
+  <div class="section-headline">반도체 투자 폭증·이차전지 안정 vs 자동차 역풍</div>
+  <span class="badge badge-pos">긍정</span>
+  <div class="overview">
+    삼성전자·SK하이닉스의 반도체 CAPEX 125조원이 LM가이드·볼스크류 최대 수요 엔진. 이차전지(천안·아산)는 안정적. 자동차 부품 수출 -8%로 일반 베어링 수요 위축. 방산은 소규모이나 관심 필요.
+  </div>
+
+  <table class="kp-table">
+    <thead>
+      <tr><th style="width:22%">산업</th><th style="width:12%">감성</th><th>핵심 동향</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>반도체</strong></td>
+        <td><span class="badge badge-pos" style="margin:0">긍정</span></td>
+        <td>삼성전자 90조+SK하이닉스 35조=연 125조 투자. 평택·이천 라인 증설로 반도체 장비용 고정밀 LM가이드(THK·HIWIN) 수요 강세. 장비업체 수주 증가로 2차 부품 수요 연쇄 상승.</td>
+      </tr>
+      <tr>
+        <td><strong>이차전지</strong></td>
+        <td><span class="badge badge-neu" style="margin:0">중립</span></td>
+        <td>삼성SDI(천안·아산) 생산 설비 유지보수 수요 안정. 신규 라인 증설은 하반기 확인 필요. LM가이드 소모성 교체 수요 꾸준.</td>
+      </tr>
+      <tr>
+        <td><strong>자동차 부품</strong></td>
+        <td><span class="badge badge-neg" style="margin:0">부정</span></td>
+        <td>자동차 부품 수출 -8.0%. 완성차 생산 조정 → 자동차부품사 베어링 발주 관망. 단납기·긴급 수요 중심 대응 필요.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-box demand">
+    <div class="analysis-title">① 반도체 장비 2차 수요처 영업 기회</div>
+    <div class="analysis-body">원익IPS·유진테크·브이엠 등 반도체 장비업체 수주가 급증하면서, 이들 장비를 제작하는 기계업체에 대한 LM가이드·볼스크류 공급 기회가 확대. 장비업체 협력사 리스트 확보 후 접근 필요.</div>
+  </div>
+  <div class="analysis-box demand">
+    <div class="analysis-title">② 방산·일반기계 소규모 수요 유지</div>
+    <div class="analysis-body">경북 방산 클러스터(포항·경산) 중소 방산업체에서 특수 베어링 수요 지속. 수량은 작으나 단가가 높아 마진 기여도 우수. 기계 가공업체 병행 방문 시 추가 발굴 가능.</div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-label">📌 오늘의 영업 액션</div>
+    <div class="action-body">반도체 장비업체(원익IPS·유진테크 등) 협력 기계업체 DB 업데이트 후 LM가이드·볼스크류 단납기 공급 가능 재고 안내 연락.</div>
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-label">🔍 이번 주 모니터링</div>
+    <div class="monitor-item">① 삼성전자·SK하이닉스 2분기 CAPEX 집행 속도 관련 장비업체 발주 동향</div>
+    <div class="monitor-item">② 자동차 부품사(대구 성서산단) 생산 재개 및 발주 재개 시점 탐문</div>
+  </div>
+
+  <div class="refs">
+    <div class="ref-cat">📰 참고 기사</div>
+    <a href="https://www.thepowernews.co.kr/view.php?ud=202606100859404600de3f0aa1be_7" target="_blank">삼성전자, 지난해 반도체 투자 90조 육박…글로벌 톱10 중 최대 (더파워뉴스, 2026-06-10)</a>
+    <a href="https://www.thelec.kr/news/articleView.html?idxno=57807" target="_blank">브이엠 '군계일학'…1분기 반도체 장비업계도 날았다 (더일렉, 2026-06-09)</a>
+    <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=458662" target="_blank">원익IPS·유진테크 상승랠리…반도체 장비株 사이클 재가동 (핀포인트, 2026-06-09)</a>
+    <a href="https://www.idaegu.co.kr/news/articleView.html?idxno=550551" target="_blank">고용보험 가입 늘었지만 제조·건설은 '찬바람' (아이대구, 2026-06-09)</a>
+    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=892656" target="_blank">대전 생산·수출 '흔들리고' 세종 수출 '선방'...지역경제 회복세 온도차 (충남일보, 2026-06-09)</a>
+  </div>
+</div>
+
+<!-- ===== 4. 로봇·자동화 ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-cat cat-robot">🤖 로봇·자동화</span>
+  </div>
+  <div class="section-headline">반도체 라인 증설·스마트팩토리 고도화로 자동화 수요 급증</div>
+  <span class="badge badge-pos">긍정</span>
+  <div class="overview">
+    반도체 CAPEX 집행 및 스마트팩토리 고도화가 로봇·자동화 설비 수요를 견인. 협동로봇·산업용 로봇 확산으로 LM가이드·볼스크류 직결 수요 증가세. 정밀 구동부품 수요는 하반기까지 안정적.
+  </div>
+
+  <table class="kp-table">
+    <thead>
+      <tr><th style="width:22%">소제목</th><th style="width:12%">감성</th><th>설명</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>반도체 자동화 수요</strong></td>
+        <td><span class="badge badge-pos" style="margin:0">긍정</span></td>
+        <td>반도체 웨이퍼 이송 로봇(라온로보틱스 등) 수요 확대로 LM가이드·볼스크류 직결 수요 증가. 반도체 라인 자동화 비율 상승으로 정밀 구동 부품 사이클 재가동.</td>
+      </tr>
+      <tr>
+        <td><strong>스마트팩토리 부품 수요</strong></td>
+        <td><span class="badge badge-pos" style="margin:0">긍정</span></td>
+        <td>계양전기·로보스타 등 자동화 부품업체 수주 급증. 초정밀 모터·구동 시스템 수요와 함께 LM가이드·볼스크류 번들 공급 기회 확대.</td>
+      </tr>
+      <tr>
+        <td><strong>소프트웨어 자동화 분리</strong></td>
+        <td><span class="badge badge-neu" style="margin:0">중립</span></td>
+        <td>SW 기반 자동화 투자 일부가 하드웨어 설비 투자를 대체하는 경향. 그러나 실물 생산라인 자동화는 하드웨어 구동 부품 수요 지속.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-box robot">
+    <div class="analysis-title">① LM가이드·볼스크류 핵심 수요처 공략</div>
+    <div class="analysis-body">반도체 이송 로봇, 협동로봇(코봇), 스마트팩토리 자동화 설비는 THK·HIWIN의 LM가이드와 볼스크류를 핵심 구동 부품으로 사용. 로봇 제조사 및 SI(시스템 인테그레이터) 직접 접촉을 통해 정기 납품 계약 추진 필요.</div>
+  </div>
+  <div class="analysis-box robot">
+    <div class="analysis-title">② 의료 로봇 신규 시장 주목</div>
+    <div class="analysis-body">WSI '유봇' 등 의료 로봇이 식약처 품목 허가를 앞두고 있으며, 내년 상반기 대형병원 설비투자 계획에 포함 예정. 의료 로봇용 소형 고정밀 LM가이드 수요 선점 기회 발생 가능.</div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-label">📌 오늘의 영업 액션</div>
+    <div class="action-body">반도체 이송 로봇·협동로봇 제조사(수도권 집중) 접촉 → 정기 납품 계약 또는 지정 공급업체 등록 추진. 단납기 대응 가능한 THK·HIWIN 재고 목록 공유.</div>
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-label">🔍 이번 주 모니터링</div>
+    <div class="monitor-item">① 주요 로봇 SI(시스템 인테그레이터) 프로젝트 발주 공고 (반도체·이차전지 공장 자동화 라인)</div>
+    <div class="monitor-item">② 계양전기·로보스타 등 자동화 부품업체 수주 확대 현황 및 납기 문의 증가 여부</div>
+  </div>
+
+  <div class="refs">
+    <div class="ref-cat">📰 참고 기사</div>
+    <a href="https://n.news.naver.com/mnews/article/003/0013997097?sid=101" target="_blank">이윤석 WSI 대표 "유봇 연내 식약처 품목허가 목표" (뉴시스, 2026-06-10)</a>
+    <a href="https://www.thelec.kr/news/articleView.html?idxno=57807" target="_blank">브이엠 '군계일학'…1분기 반도체 장비업계도 날았다 (더일렉, 2026-06-09)</a>
+    <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=458662" target="_blank">원익IPS·유진테크 상승랠리…반도체 장비株 사이클 재가동 (핀포인트, 2026-06-09)</a>
+    <a href="http://www.the-biz.co.kr/news/articleView.html?idxno=722198" target="_blank">계양전기, 3500억 규모 '로보틱스·전장' 부품 거점 부상 (더비즈, 2026-06-09)</a>
+  </div>
+</div>
+
+<!-- ===== 5. 메이커 동향 ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-cat cat-maker">⚙️ 메이커 동향</span>
+  </div>
+  <div class="section-headline">고환율에 수입 메이커 단가 인상 압력 — 국산 점유율 확대 기회</div>
+  <span class="badge badge-neu">중립</span>
+  <div class="overview">
+    원/달러 1,500원대 고환율로 일본·유럽계 수입 메이커 제품 원가가 급등. NSK·THK·SKF 등은 단가 인상 압력을 받는 반면, 삼익THK·SBC 등 국산 브랜드는 가격 경쟁력 부각. 고정밀 반도체용은 수입산 지위 견고.
+  </div>
+
+  <table class="delivery-table">
+    <thead>
+      <tr>
+        <th>메이커</th>
+        <th>주력 품목</th>
+        <th>글로벌/국내 점유율</th>
+        <th>국내 유통 동향</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>NSK (일본)</strong></td>
+        <td>베어링 전 품목</td>
+        <td>글로벌 3위 / 국내 1위권</td>
+        <td>고환율로 단가 인상 압력. 자동차부품 수요 감소로 물량 보수적. 반도체용 유지.</td>
+      </tr>
+      <tr>
+        <td><strong>THK (일본)</strong></td>
+        <td>LM가이드, 볼스크류</td>
+        <td>LM가이드 글로벌 1위 / 국내 50%+</td>
+        <td>반도체·자동화 수요로 공급 타이트. 납기 4~8주 유지. 단가 인상 협의 진행 중.</td>
+      </tr>
+      <tr>
+        <td><strong>SKF (스웨덴)</strong></td>
+        <td>산업용 베어링</td>
+        <td>글로벌 1위 / 국내 프리미엄</td>
+        <td>고환율 영향으로 수입가 급등. 일부 수요처 국산 대체 검토 중. 중공업·방산 수요 견고.</td>
+      </tr>
+      <tr>
+        <td><strong>HIWIN (대만)</strong></td>
+        <td>LM가이드, 볼스크류</td>
+        <td>글로벌 2위 / 국내 30%+</td>
+        <td>THK 대비 가격 경쟁력 우위. 반도체·자동화 시장에서 THK 대안으로 점유율 확대 중.</td>
+      </tr>
+      <tr>
+        <td><strong>삼익THK (국산)</strong></td>
+        <td>LM가이드, 베어링</td>
+        <td>국내 LM 점유 15~20%</td>
+        <td>고환율 수혜로 수요 문의 증가. 가격 경쟁력 부각. 범용 자동화·기계 시장 점유율 상승 기대.</td>
+      </tr>
+      <tr>
+        <td><strong>SBC (국산)</strong></td>
+        <td>LM가이드, 볼스크류</td>
+        <td>국내 LM 점유 10~15%</td>
+        <td>중소 자동화 설비업체 채택 증가. 단가 우위로 범용 시장 공략. 납기 안정.</td>
+      </tr>
+      <tr>
+        <td><strong>NTN (일본)</strong></td>
+        <td>산업용 베어링</td>
+        <td>글로벌 4위 / 국내 2위권</td>
+        <td>자동차 부품 수요 감소로 물량 감소. 산업용 분야 방어적 영업 기조.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-box maker">
+    <div class="analysis-title">① 국산 LM가이드(삼익THK·SBC) 제안 영업 확대</div>
+    <div class="analysis-body">원/달러 1,500원대가 지속되면서 THK·HIWIN 대비 삼익THK·SBC의 가격 경쟁력이 20~30% 우위로 벌어짐. 범용 자동화 설비, 일반 기계 설비에서 국산 대체 제안 영업 확대 시 마진율 방어 및 고객 충성도 향상 기대.</div>
+  </div>
+  <div class="analysis-box maker">
+    <div class="analysis-title">② THK·HIWIN 반도체용 납기 관리 중요성</div>
+    <div class="analysis-body">반도체 라인 증설 수요 급증으로 THK LM가이드 납기가 4~8주 이상으로 길어지는 추세. HIWIN이 납기 단축 대안으로 점유율을 늘리고 있어, 태광은 HIWIN 재고 확보로 반도체 장비업체의 긴급 수요를 선점할 기회 있음.</div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-label">📌 오늘의 영업 액션</div>
+    <div class="action-body">THK LM가이드 납기 지연 가능성 있는 수요처에 HIWIN 또는 삼익THK 대안 제안 준비 — 재고 현황 확인 후 제안서 1건 발송.</div>
+  </div>
+  <div class="monitor-box">
+    <div class="monitor-label">🔍 이번 주 모니터링</div>
+    <div class="monitor-item">① THK·NSK 등 주요 메이커 대리점 Price List 개정 공문 수신 여부</div>
+    <div class="monitor-item">② HIWIN 국내 대리점 납기 단축 여부 및 삼익THK 수주 동향</div>
+  </div>
+
+  <div class="refs">
+    <div class="ref-cat">📰 참고 기사</div>
+    <a href="https://www.laborplus.co.kr/news/articleView.html?idxno=40952" target="_blank">6월 2주 주요 제조업 전망 (노동플러스, 2026-06-09)</a>
+    <a href="https://www.ulsanpress.net/news/articleView.html?idxno=576783" target="_blank">미래차 주도권 확보, 지금이 '골든타임' (울산프레스, 2026-06-09)</a>
+    <a href="https://www.dwidedaily.com/news/articleView.html?idxno=295408" target="_blank">대구·경북 제조업 생산 증가, 소비·투자는 지역별 온도차 (와이드데일리, 2026-06-09)</a>
+  </div>
+</div>
+
+<!-- ===== 푸터 ===== -->
+<div class="footer">
+  태광베어링 업황 브리핑 · 자동 생성 · 2026-06-10 · 대구·경북 본사 / 수도권 / 천안·아산 영업 커버리지
+</div>
+
+</div><!-- .page-wrap -->
+</body>
+</html>
