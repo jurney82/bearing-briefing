@@ -3,159 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>태광베어링 업황 브리핑 · 2026-06-29</title>
+<title>태광베어링 업황 브리핑 2026-06-29</title>
 <style>
-@page{size:A4;margin:18mm 15mm;}
-*{box-sizing:border-box;}
-body{font-family:'Malgun Gothic','맑은 고딕',sans-serif;background:#f0f0f0;margin:0;color:#222;line-height:1.5;}
-.page-wrap{background:#fff;max-width:820px;margin:0 auto;padding:28px 32px 40px;box-shadow:0 2px 12px rgba(0,0,0,.15);}
-h1{font-size:22px;margin:0 0 4px;}
-.date{color:#555;font-size:14px;margin-bottom:10px;}
-.chips{margin:8px 0 4px;}
-.chip{display:inline-block;font-size:12px;padding:3px 9px;border-radius:12px;margin:2px 4px 2px 0;font-weight:bold;}
-.pos{background:#EAF3DE;color:#3B6D11;}
-.neu{background:#FAEEDA;color:#854F0B;}
-.neg{background:#FAECE7;color:#993C1D;}
-.fx{font-size:13px;background:#f6f6f6;border-left:4px solid #888;padding:7px 10px;margin:10px 0 18px;}
-h2{font-size:16px;color:#fff;padding:7px 12px;border-radius:4px;margin:22px 0 10px;}
-.c-market{background:#BA7517;}
-.c-project{background:#C0392B;}
-.c-region{background:#2E7D32;}
-.c-robot{background:#7B3FA5;}
-.c-sales{background:#1A5276;}
-h3{font-size:14px;margin:14px 0 5px;color:#333;}
-p{margin:6px 0;font-size:13.5px;}
-ul{margin:6px 0;padding-left:20px;font-size:13.5px;}
-li{margin:3px 0;}
-table{border-collapse:collapse;width:100%;font-size:12.5px;margin:8px 0;}
-th,td{border:1px solid #ccc;padding:6px 8px;text-align:left;vertical-align:top;}
-th{background:#f0f0f0;}
-.star{color:#C0392B;font-weight:bold;}
-.action{background:#F4F8FB;border-left:4px solid #1A5276;padding:7px 10px;font-size:13px;margin:6px 0;}
-.sent{font-size:11px;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;}
-.share-box{position:relative;border:1.5px dashed #1A5276;background:#F4F8FB;border-radius:6px;padding:12px 14px 14px;margin:10px 0;font-size:12.5px;cursor:pointer;white-space:pre-line;}
-.share-box .tag{position:absolute;top:5px;right:10px;font-size:10px;color:#1A5276;}
-.refs{font-size:12px;}
-.refs a{color:#1A5276;}
-.btn-print{display:inline-block;background:#1A5276;color:#fff;border:none;padding:10px 18px;border-radius:5px;font-size:14px;cursor:pointer;margin:18px 0 6px;}
-.footer{margin-top:26px;border-top:1px solid #ddd;padding-top:10px;font-size:11px;color:#888;text-align:center;}
-.none{color:#888;font-size:13px;}
-@media print{.btn-print{display:none;}table,tr{break-inside:avoid;page-break-inside:avoid;}h2,h3{break-after:avoid;}.page-wrap{box-shadow:none;max-width:none;}body{background:#fff;}}
+@page { size: A4; margin: 18mm 15mm; }
+* { box-sizing: border-box; }
+body { font-family: 'Malgun Gothic','맑은 고딕',sans-serif; background:#f0f0f0; margin:0; color:#222; line-height:1.55; }
+.page-wrap { background:#fff; max-width:820px; margin:24px auto; padding:30px 34px 40px; box-shadow:0 2px 14px rgba(0,0,0,.15); }
+h1 { font-size:21px; margin:0 0 4px; color:#1A2A4A; }
+.sub { color:#666; font-size:13px; margin-bottom:14px; }
+.chips { margin:10px 0 6px; }
+.chip { display:inline-block; font-size:12px; padding:3px 9px; border-radius:12px; margin:2px 4px 2px 0; }
+.pos { background:#EAF3DE; color:#3B6D11; }
+.neu { background:#FAEEDA; color:#854F0B; }
+.neg { background:#FAECE7; color:#993C1D; }
+.fx { background:#eef2f7; border-left:4px solid #1A5276; padding:8px 12px; font-size:13px; margin:12px 0 18px; }
+h2 { font-size:16px; color:#fff; padding:7px 12px; margin:26px 0 12px; border-radius:4px; }
+.c-market { background:#BA7517; }
+.c-proj { background:#C0392B; }
+.c-region { background:#2E7D32; }
+.c-robot { background:#7B3FA5; }
+.c-sales { background:#1A5276; }
+h3 { font-size:14px; margin:16px 0 6px; color:#1A2A4A; }
+p { margin:6px 0; font-size:13.5px; }
+table { border-collapse:collapse; width:100%; margin:8px 0 14px; font-size:12.5px; }
+th,td { border:1px solid #ccc; padding:6px 8px; text-align:left; vertical-align:top; }
+th { background:#f2f2f2; }
+.star { color:#C0392B; font-weight:bold; }
+.point { margin:4px 0 4px 2px; font-size:13px; }
+.point b { color:#1A2A4A; }
+.action { background:#F4F8FB; border-left:3px solid #1A5276; padding:6px 10px; font-size:13px; margin:6px 0 4px; }
+.share-box { position:relative; border:1.5px dashed #1A5276; background:#F4F8FB; border-radius:6px; padding:14px 14px 14px; margin:10px 0; font-size:13px; cursor:pointer; }
+.share-box .tag { position:absolute; top:5px; right:10px; font-size:11px; color:#1A5276; }
+.refs { font-size:12px; margin:6px 0; }
+.refs a { color:#1A5276; text-decoration:none; }
+.refs li { margin:3px 0; }
+.btn-print { display:inline-block; background:#1A5276; color:#fff; border:none; padding:9px 18px; border-radius:5px; font-size:13px; cursor:pointer; margin:18px 0 4px; }
+.footer { text-align:center; color:#999; font-size:12px; margin-top:26px; border-top:1px solid #eee; padding-top:12px; }
+@media print { .btn-print{display:none} table,tr{break-inside:avoid;page-break-inside:avoid} h2,h3{break-after:avoid} }
 </style>
 </head>
 <body>
 <div class="page-wrap">
+
 <h1>☕ 태광베어링 업황 브리핑</h1>
-<div class="date">2026년 6월 29일 (월) · 커버기간 6/26~6/29</div>
+<div class="sub">2026년 6월 29일 (월) · 커버기간 6/26~6/29 · 베어링·LM가이드·볼스크류 유통</div>
+
 <div class="chips">
 <span class="chip pos">📊 시장 긍정</span>
-<span class="chip neg">🏗️ 프로젝트 핫</span>
-<span class="chip pos">🗺️ 지역 활발</span>
-<span class="chip pos">🤖 로봇 긍정</span>
+<span class="chip neg">🏗️ 프로젝트 활발</span>
+<span class="chip pos">🤖 로봇·자동화 긍정</span>
 </div>
-<div class="fx">💹 <b>원/달러 환율</b> 1,530원대 후반 (약 1,538원) · 중동 지정학 긴장 재확대로 <b>상승</b> 압력 — 수입 베어링 원가 부담 요인</div>
+
+<div class="fx">💹 <b>원/달러 환율 1,536.5원</b> (전일 대비 +4.5원 ▲상승, 6/29 개장) — 수입 메이커품 원가 부담 지속, 국산 대체·재고 선확보 유리</div>
 
 <!-- 시장 -->
-<h2 class="c-market">📊 시장 · 수요산업 <span class="sent pos">긍정</span></h2>
-<p><b>반도체 '슈퍼 사이클' 지속 — 직동부품 전방 수요 견조</b></p>
-<ul>
-<li><b>AI 데이터센터 설비투자 2000억달러 돌파</b>: 빅테크 CAPEX 확대로 메모리 투톱(삼성·SK) 역대급 증설 공세 지속.</li>
-<li><b>AI發 설비 확산</b>: 증설 경쟁이 반도체를 넘어 발전설비(가스터빈)까지 번지며 회전기계·구동부 수요 저변 확대.</li>
-<li><b>공작기계 4월 해외수주 호조</b>: 반도체·데이터센터·자동화·방산向 설비투자가 K-공작기계 새 성장축으로 부상.</li>
-</ul>
-<div class="action">📌 <b>영업 액션</b>: 공작기계·장비 제조 거래처에 메모리 증설 사이클 대비 LM가이드·볼스크류 납기 단축·재고 확보 선제 제안.</div>
-<p class="none">※ 베어링·LM가이드·볼스크류 직접 시황 뉴스는 이번 기간 특이사항 없음.</p>
+<h2 class="c-market">📊 시장 · 수요산업</h2>
+<p><b>헤드라인:</b> 정부, 반도체·AI에 1,000조+ 권역별 메가투자 발표 <span class="chip pos">긍정</span></p>
+<div class="point"><b>AI發 수요 폭증</b> · 마이크론 깜짝 실적, 메모리 부족 장기화. AI 데이터센터 증설이 반도체·발전설비까지 확산.</div>
+<div class="point"><b>공작기계 수주 회복</b> · 4월 해외수주 증가. 수요축이 자동차→AI·반도체·자동화·방산으로 이동(DN솔루션즈).</div>
+<div class="point"><b>다운사이클 경계론</b> · 일부 호황기 과잉증설 우려 제기되나 AI 수요가 상쇄.</div>
+<div class="action">📌 <b>영업 액션:</b> 대구·경북 공작기계 업체에 반도체·자동화향 LM가이드·볼스크류 납기 단축 및 재고 선확보 제안 전화.</div>
+<p style="font-size:12.5px;color:#888;">※ 베어링·LM가이드 자체 시황 신규 기사 없음 — 직동부품 수요는 아래 프로젝트·로봇 항목으로 견인.</p>
 
-<!-- 프로젝트 -->
-<h2 class="c-project">🏗️ 프로젝트 · 투자 레이더 <span class="sent neg">초대형</span></h2>
-<p><b>6/29 정부 반도체·AI 메가투자 발표 (이재명 대통령·기업 70곳 총출동)</b></p>
+<!-- 프로젝트 레이더 -->
+<h2 class="c-proj">🏗️ 프로젝트 · 투자 레이더 <span style="font-size:12px;font-weight:normal;">★핵심★</span></h2>
+<p style="font-size:13px;">6/29 정부 국민보고회에서 권역별 반도체·AI 투자안 공개. <span class="star">★</span> = 태광 커버리지 내.</p>
 <table>
-<tr><th>기업·주체</th><th>지역</th><th>내용</th><th>금액·규모</th><th>영업 기회 (직동부품 관점)</th></tr>
-<tr><td>삼성디스플레이</td><td><span class="star">★</span> 충남 천안·아산</td><td>OLED·차세대 디스플레이 신규투자</td><td>10년 100조 거론</td><td>증착·노광·검사 장비 증설 → LM가이드·볼스크류 다량 수요</td></tr>
-<tr><td>정부(영남권)</td><td><span class="star">★</span> 대구·경북</td><td>피지컬AI 산업단지 / 구미 반도체 특화단지 / 포항 이차전지</td><td>권역 배분 협의 중</td><td>로봇·자동화·이차전지 설비 → 베어링·LM가이드 잠재 수요</td></tr>
-<tr><td>삼성전자</td><td>호남(신규)·평택·용인</td><td>반도체 클러스터 팹 신설</td><td>팹 1기 약 60조, 최대 5기</td><td>중장기 장비 발주 시 직동부품 대형 파이프라인</td></tr>
-<tr><td>SK하이닉스</td><td>충북 청주·경기 이천</td><td>메모리 공장 증설</td><td>역대급 증설</td><td>장비 1차 벤더 경유 LM가이드·볼스크류</td></tr>
-<tr><td>마이크론</td><td>베트남 하이퐁(해외)</td><td>신규 공장 7월 착공</td><td>약 1조원</td><td>참고 — 글로벌 메모리 증설 신호</td></tr>
+<tr><th>기업</th><th>지역</th><th>내용</th><th>규모</th><th>영업 기회 (직동부품 관점)</th></tr>
+<tr><td>삼성디스플레이</td><td>충남 아산·천안 <span class="star">★</span></td><td>OLED·차세대 디스플레이 생산거점 확대</td><td>약 100조원 거론</td><td>증착·이송장비 다수 → LM가이드·볼스크류 대량 수요</td></tr>
+<tr><td>삼성SDI</td><td>충남 천안 <span class="star">★</span></td><td>천안사업장 이차전지 투자</td><td>규모 협의 중</td><td>권취·조립 설비 → 베어링·LM가이드</td></tr>
+<tr><td>SK하이닉스</td><td>충북 청주</td><td>청주 공장 증설</td><td>메가투자 일환</td><td>반도체 장비 입고 → LM가이드·볼스크류</td></tr>
+<tr><td>삼성전자·SK하이닉스</td><td>경기 용인·평택</td><td>용인 클러스터 일정 단축 논의</td><td>1,000조+ 권역 합산</td><td>장비 본격 입고 시 직동부품 수요 폭증</td></tr>
+<tr><td>구미 특화단지·영남 피지컬AI</td><td>경북 구미 <span class="star">★</span></td><td>영남권 피지컬AI 산업단지 추진 논의</td><td>확정 전</td><td>대경 핵심 — 장비 수요 조기 선점 타깃</td></tr>
 </table>
-<p style="font-size:12px;color:#666;">⚠️ '호남 몰빵·대구경북 패싱' 논란이 정치 변수로 부상 — 대경권 배분 규모는 후속 공시·확정 발표로 재확인 필요.</p>
+<p style="font-size:12.5px;color:#888;">※ 해당 기간 전자공시(DART) 내 제조업 신규시설투자 공시는 없음 — 위 건은 6/26~29 착공·증설 보도 기준.</p>
 
-<!-- 지역 -->
+<!-- 지역 온도계 -->
 <h2 class="c-region">🗺️ 지역 온도계</h2>
-<ul>
-<li><b>대구·경북 🔥</b>: 영남 피지컬AI 산단·구미 반도체 특화단지·포항 이차전지 거론, 단 패싱 논란 변수.</li>
-<li><b>천안·아산 🔥</b>: 삼성디스플레이 아산·천안 캠퍼스 OLED 100조 투자 거점으로 부각.</li>
-<li><b>수도권 ✅</b>: 용인 클러스터 일정 앞당김 논의, 평택 캠퍼스 중심 가동.</li>
-</ul>
+<table>
+<tr><th>권역</th><th>온도</th><th>이슈</th></tr>
+<tr><td>대구·경북 <span class="star">★</span></td><td>🔥 뜨거움</td><td>구미 반도체 특화단지·영남 피지컬AI 부상 / "대구경북 패싱·호남 몰빵" 논란 확산</td></tr>
+<tr><td>천안·아산 <span class="star">★</span></td><td>🔥 뜨거움</td><td>삼성디스플레이 아산·천안 OLED 100조 / 삼성SDI 천안 투자 거론</td></tr>
+<tr><td>수도권</td><td>✅ 보통</td><td>용인 클러스터 일정 단축 / 평택 캠퍼스 중심 재편</td></tr>
+</table>
 
-<!-- 로봇 -->
-<h2 class="c-robot">🤖 로봇 · 자동화 / 메이커 <span class="sent pos">긍정</span></h2>
-<ul>
-<li><b>뉴로메카</b> 유상증자 통과 → 휴머노이드·AI로봇 자동화 허브 거점 투자 확장.</li>
-<li><b>현대차</b> 휴머노이드 '아틀라스' 도입·자동화 공장 확대 추진 (설비투자 가용재원 상회).</li>
-</ul>
-<div class="action">📌 <b>영업 액션</b>: 협동로봇·자동화 설비사에 정밀 베어링·LM가이드·볼스크류 공급 레퍼런스 제안.</div>
-<p class="none">※ 삼익THK·NSK·SKF·NTN·HIWIN 등 메이커 직접 뉴스는 이번 기간 특이사항 없음.</p>
+<!-- 로봇·메이커 -->
+<h2 class="c-robot">🤖 로봇 · 자동화 / 메이커</h2>
+<p><b>헤드라인:</b> 휴머노이드·협동로봇 투자 가속 <span class="chip pos">긍정</span></p>
+<div class="point"><b>뉴로메카</b> · 유상증자 통과, 휴머노이드 사업 확장·AI 로봇 자동화 허브 거점 투자.</div>
+<div class="point"><b>현대차</b> · 휴머노이드 '아틀라스' 도입, 자동화 공장 추진(설비투자 확대).</div>
+<div class="action">📌 <b>영업 액션:</b> 협동로봇·자동화 설비 제작사 대상 정밀 LM가이드·볼스크류·베어링 공급 카탈로그 발송.</div>
+<p style="font-size:12.5px;color:#888;">※ 삼익THK·NSK·SKF·NTN·HIWIN 등 메이커 직접 뉴스 없음.</p>
 
 <!-- 영업 인텔리전스 -->
-<h2 class="c-sales">💼 영업 인텔리전스</h2>
+<h2 class="c-sales">💼 영업 인텔리전스 <span style="font-size:12px;font-weight:normal;">★실전★</span></h2>
 
 <h3>(a) 프로젝트 기업 상세</h3>
 <table>
 <tr><th>기업</th><th>소재지(공장)</th><th>업종</th><th>예상 수요 품목</th><th>접근 경로</th></tr>
-<tr><td>삼성디스플레이</td><td>충남 아산·천안</td><td>디스플레이(OLED)</td><td>LM가이드·볼스크류 (증착·노광 장비)</td><td>장비·세트 협력업체 경유</td></tr>
-<tr><td>SK하이닉스</td><td>충북 청주·경기 이천</td><td>메모리 반도체</td><td>LM가이드·볼스크류</td><td>장비 1차 벤더 경유</td></tr>
-<tr><td>삼성전자</td><td>평택·화성·기흥, 아산·천안</td><td>반도체</td><td>LM가이드·볼스크류</td><td>장비사 경유</td></tr>
+<tr><td>삼성디스플레이</td><td>충남 아산·천안</td><td>디스플레이</td><td>LM가이드·볼스크류</td><td>증착·이송장비 협력사 경유</td></tr>
+<tr><td>삼성SDI</td><td>충남 천안</td><td>이차전지</td><td>베어링·LM가이드</td><td>배터리 설비 1차 벤더 경유</td></tr>
+<tr><td>SK하이닉스</td><td>충북 청주</td><td>반도체</td><td>LM가이드·볼스크류</td><td>반도체 장비사 경유</td></tr>
 </table>
 
 <h3>(b) 지역 타깃 업체 리스트</h3>
 <table>
 <tr><th>권역</th><th>업체명</th><th>소재지</th><th>타깃 이유</th></tr>
-<tr><td>대구·경북</td><td>지피티(GPT)</td><td>경북 구미 산동읍</td><td>반도체·디스플레이 제조용 기계 — 구미 특화단지 증설 수혜</td></tr>
-<tr><td>대구·경북</td><td>에스와이텍</td><td>경북 구미 4공단</td><td>반도체 제조 — 메모리 증설 사이클 직동부품 수요</td></tr>
-<tr><td>대구·경북</td><td>윤성정밀</td><td>경북 구미 신평동</td><td>산업용 기계 제조 — 구동부 베어링·LM 수요</td></tr>
-<tr><td>천안·아산</td><td>제이스로보틱스</td><td>충남 아산 음봉면</td><td>반도체·디스플레이 장비 — 삼성D OLED 투자 수혜</td></tr>
-<tr><td>천안·아산</td><td>에이치앤이루자</td><td>충남 아산 둔포면</td><td>디스플레이 제조용 기계 — OLED 증착장비 직동부품</td></tr>
+<tr><td>천안·아산</td><td>제이스로보틱스</td><td>아산 음봉면</td><td>반도체·디스플레이 제조용 기계 — 삼성D 투자 수혜 장비사</td></tr>
+<tr><td>천안·아산</td><td>에이치앤이루자</td><td>아산 둔포면</td><td>디스플레이 증착장비 — OLED 100조 투자와 직접 연관</td></tr>
+<tr><td>대구·경북</td><td>지피티(GPT)</td><td>구미 산동읍</td><td>반도체·디스플레이 장비 — 구미 특화단지 인접</td></tr>
+<tr><td>대구·경북</td><td>윤성정밀</td><td>구미 신평동</td><td>산업용 기계 제조 — 직동부품 직납 가능성</td></tr>
 </table>
 
-<h3>(c) 거래처 공유용 멘트 (클릭 시 복사)</h3>
-<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())"><span class="tag">📋 클릭하여 복사</span>[업계소식] 정부, 6/29 반도체·AI 메가투자 발표 — 호남 반도체 클러스터·영남 피지컬AI 산단·천안아산 디스플레이 100조 거론.
-중장기 LM가이드·볼스크류 등 직동부품 수요 확대 신호.
-출처: 위키트리·TV조선 외, 6/29</div>
-<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())"><span class="tag">📋 클릭하여 복사</span>[업계소식] 반도체 슈퍼사이클 지속 — 빅테크 AI 데이터센터 설비투자 2000억달러 돌파, 메모리 투톱 역대급 증설.
-장비向 직동부품·베어링 수요 견조 전망.
-출처: 아시아타임, 6/29</div>
-<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())"><span class="tag">📋 클릭하여 복사</span>[업계소식] 원/달러 환율 1,530원대 후반, 중동 불안에 상승 압력.
-수입 베어링 원가 부담 — 재고·납기 선제 관리 권장.
-출처: 더비즈, 6/29</div>
+<h3>(c) 거래처 공유용 멘트 <span style="font-size:12px;font-weight:normal;color:#888;">(클릭하면 복사)</span></h3>
+<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())">
+<span class="tag">📋 클릭하여 복사</span>
+[업계소식] 정부, 반도체·AI에 1,000조+ 권역별 메가투자 발표(6/29).<br>
+천안·아산 디스플레이, 청주·용인 반도체 증설로 직동부품 중장기 수요 확대 전망.<br>
+출처: TV조선·위키트리, 2026.6.29</div>
+
+<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())">
+<span class="tag">📋 클릭하여 복사</span>
+[업계소식] 삼성디스플레이 아산·천안 OLED 약 100조 투자 거론.<br>
+디스플레이 증착·이송장비향 LM가이드·볼스크류 수요 기대.<br>
+출처: 라이브비즈투데이, 2026.6.29</div>
+
+<div class="share-box" onclick="navigator.clipboard.writeText(this.innerText.replace('📋 클릭하여 복사','').trim())">
+<span class="tag">📋 클릭하여 복사</span>
+[업계소식] 공작기계 4월 해외수주 증가, AI·반도체·자동화 설비투자 확대.<br>
+공작기계·자동화 설비향 직동부품·베어링 수요 견조.<br>
+출처: MFG코리아, 2026.6.28</div>
 
 <h3>(d) 주간 영업 액션 플랜</h3>
 <table>
 <tr><th>우선순위</th><th>지역</th><th>업체·대상</th><th>액션</th><th>접근 명분</th></tr>
-<tr><td><span class="star">1</span></td><td>대구·경북</td><td>구미 지피티·에스와이텍 구매팀</td><td>전화 — LM가이드·볼스크류 납기·재고 협의</td><td>구미 반도체 특화단지·메모리 증설</td></tr>
-<tr><td>2</td><td>천안·아산</td><td>아산 제이스로보틱스·에이치앤이루자</td><td>방문/견적 — 직동부품 공급 제안</td><td>삼성디스플레이 OLED 100조 투자</td></tr>
-<tr><td>3</td><td>대구·경북</td><td>구미 윤성정밀</td><td>전화 — 구동부 베어링 견적</td><td>산업기계 설비 수요</td></tr>
-<tr><td>4</td><td>전 거래처</td><td>수입품 거래처</td><td>정보공유 — 환율 상승 사전 안내·재고 제안</td><td>원달러 1,530원대 상승</td></tr>
+<tr><td>1</td><td>대구·경북 <span class="star">★</span></td><td>구미 지피티·윤성정밀</td><td>방문/견적</td><td>구미 반도체 특화단지·영남 피지컬AI 부상</td></tr>
+<tr><td>2</td><td>천안·아산</td><td>아산 제이스로보틱스·에이치앤이루자</td><td>전화/정보공유</td><td>삼성D 아산·천안 OLED 100조 투자</td></tr>
+<tr><td>3</td><td>대경</td><td>공작기계 제작사</td><td>견적</td><td>공작기계 수주 증가, 직동부품 재고 제안</td></tr>
+<tr><td>4</td><td>수도권</td><td>용인·평택 장비 협력사</td><td>정보공유</td><td>용인 클러스터 일정 단축</td></tr>
 </table>
 
-<button class="btn-print" onclick="window.print()">🖨️ PDF로 저장</button>
-
-<h3>📎 참고 기사 · 공시</h3>
-<div class="refs">
-<ul>
-<li><a href="https://www.asiatime.co.kr/article/20260628500018" target="_blank">[메모리 뉴노멀] 반도체 '슈퍼 사이클'은 계속된다 (아시아타임, 6/29)</a></li>
-<li><a href="https://www.wikitree.co.kr/articles/1143623" target="_blank">이재명 대통령, 1000조 메가프로젝트 공개 (위키트리, 6/29)</a></li>
-<li><a href="https://news.tvchosun.com/site/data/html_dir/2026/06/29/2026062990050.html" target="_blank">李대통령, 청와대서 반도체·AI 투자 발표…기업 70곳 (TV조선, 6/29)</a></li>
-<li><a href="https://slownews.kr/162333" target="_blank">반도체+AI에 2000조 원…천안아산 삼성디스플레이 확대 (슬로우뉴스, 6/29)</a></li>
-<li><a href="https://www.sedaily.com/article/20061081?ref=naver" target="_blank">[사설] '호남 반도체' 이어 '영남 피지컬AI' (서울경제, 6/29)</a></li>
-<li><a href="https://www.m-i.kr/news/articleView.html?idxno=1385968" target="_blank">구미 "반도체 입지, 산업 잣대로 결정해야" (매일일보, 6/28)</a></li>
-<li><a href="https://www.donga.com/news/Economy/article/all/20260626/134185841/2" target="_blank">호남에 초대형 팹, 충청은 패키징 허브 (동아일보, 6/26)</a></li>
-<li><a href="https://dealsite.co.kr/articles/164151" target="_blank">유증 관문 넘은 뉴로메카…휴머노이드 사업 확장 (딜사이트, 6/29)</a></li>
-<li><a href="https://www.mfgkr.com/news/articleView.html?idxno=28262" target="_blank">한국공작기계산업협회 4월 수주 통계 (MFG, 6/28)</a></li>
-<li><a href="http://www.the-biz.co.kr/news/articleView.html?idxno=723419" target="_blank">원/달러 환율 1530원대 후반 등락 전망 (더비즈, 6/29)</a></li>
+<!-- 참고 -->
+<h2 class="c-sales" style="background:#555;">🔗 참고 기사</h2>
+<ul class="refs">
+<li><a href="https://www.livebiz.today/news/articleView.html?idxno=202924" target="_blank">'호남 반도체'·'영남 피지컬AI' 시대 열리나…2천조 투입 메가프로젝트 (6/29)</a></li>
+<li><a href="https://news.tvchosun.com/site/data/html_dir/2026/06/29/2026062990050.html" target="_blank">李대통령, 청와대서 반도체·AI 투자 발표…기업 70곳 총출동 (6/29)</a></li>
+<li><a href="https://www.topstarnews.net/news/articleView.html?idxno=16114627" target="_blank">삼성 전국 투자망, AI 제조국가 도약 가른다 (6/28)</a></li>
+<li><a href="https://www.kbmaeil.com/article/20260628500614" target="_blank">'호남 몰빵·대구경북 패싱', 국가 경제 근간 흔든다 (6/28)</a></li>
+<li><a href="https://www.m-i.kr/news/articleView.html?idxno=1385968" target="_blank">국민의힘 구미시의원 "반도체 입지, 산업 잣대로 결정해야" (6/28)</a></li>
+<li><a href="https://www.news1.kr/industry/general-industry/6208697" target="_blank">마이크론 '깜짝 실적'…MLCC·기판 수요 입증 (6/26)</a></li>
+<li><a href="https://www.mfgkr.com/news/articleView.html?idxno=28262" target="_blank">한국공작기계산업협회 4월 수주 통계 — 해외수주 증가 (6/28)</a></li>
+<li><a href="https://dealsite.co.kr/articles/164151" target="_blank">유증 관문 넘은 뉴로메카…휴머노이드 사업 확장 (6/29)</a></li>
+<li><a href="https://www.dailian.co.kr/news/view/1660822/?sc=Naver" target="_blank">원·달러 환율 4.5원 오른 1536.5원 출발 (6/29)</a></li>
 </ul>
-</div>
+
+<button class="btn-print" onclick="window.print()">📄 PDF로 저장</button>
 
 <div class="footer">태광베어링 업황 브리핑 · 자동 생성 · 2026-06-29</div>
+
 </div>
 </body>
 </html>
